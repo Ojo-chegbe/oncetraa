@@ -12,7 +12,7 @@ const ResourcesAwareness = () => {
         <HeroSection 
           headline="Understanding Cancer Is the First Step to Defeating It."
           subHeadline="Oncetra's Cancer Awareness resource is written for everyone — patients, families, community leaders, and healthcare workers. No jargon. No overstatement. Just honest, evidence-based information."
-          bgImage="/resources/awareness_hero.png"
+          bgImage="/images/heroes/awareness.png"
           showRightContent={false}
         />
       </ScrollReveal>
@@ -126,34 +126,34 @@ const ResourcesAwareness = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full">
             <div className="flex flex-col gap-6">
-              <div className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm">
+              <div className="bg-white p-6 rounded-2xl border border-gray-100">
                 <span className="text-[#39A46B] font-bold text-lg mb-2 block">01</span>
                 <p>Do not use tobacco in any form. Limit alcohol consumption.</p>
               </div>
-              <div className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm">
+              <div className="bg-white p-6 rounded-2xl border border-gray-100">
                 <span className="text-[#39A46B] font-bold text-lg mb-2 block">02</span>
                 <p>Eat a diet rich in vegetables, fruits, whole grains, and legumes, and limit processed meats and highly processed foods.</p>
               </div>
-              <div className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm">
+              <div className="bg-white p-6 rounded-2xl border border-gray-100">
                 <span className="text-[#39A46B] font-bold text-lg mb-2 block">03</span>
                 <p>Maintain a healthy body weight and stay physically active.</p>
               </div>
-              <div className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm">
+              <div className="bg-white p-6 rounded-2xl border border-gray-100">
                 <span className="text-[#39A46B] font-bold text-lg mb-2 block">04</span>
                 <p>Know your hepatitis B status and vaccinate if needed.</p>
               </div>
             </div>
             
             <div className="flex flex-col gap-6">
-              <div className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm">
+              <div className="bg-white p-6 rounded-2xl border border-gray-100">
                 <span className="text-[#39A46B] font-bold text-lg mb-2 block">05</span>
                 <p>If you are a woman aged 25 to 65 and have never had a PAP smear, get one.</p>
               </div>
-              <div className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm">
+              <div className="bg-white p-6 rounded-2xl border border-gray-100">
                 <span className="text-[#39A46B] font-bold text-lg mb-2 block">06</span>
                 <p>If you are a man over 45, speak to a doctor about PSA testing.</p>
               </div>
-              <div className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm">
+              <div className="bg-white p-6 rounded-2xl border border-gray-100">
                 <span className="text-[#39A46B] font-bold text-lg mb-2 block">07</span>
                 <p>Ensure your children receive the HPV vaccine.</p>
               </div>

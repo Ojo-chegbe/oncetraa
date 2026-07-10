@@ -31,8 +31,8 @@ const TeamSection: React.FC<TeamSectionProps> = ({
   }[columns];
 
   return (
-    <div className={`py-20 px-[20px] md:px-[60px] lg:px-[120px] ${bgWhite ? 'bg-white' : 'bg-[#F4F5F6]'}`}>
-      <div className="max-w-[1200px] mx-auto">
+    <div className={`flex justify-center py-20 px-6 md:px-12 lg:px-[120px] ${bgWhite ? 'bg-white' : 'bg-[#F4F5F6]'}`}>
+      <div className="w-full max-w-[1400px]">
         <ScrollReveal>
           <div className="text-center mb-16 max-w-[800px] mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold text-[#222222] mb-6 tracking-tight">
@@ -49,7 +49,7 @@ const TeamSection: React.FC<TeamSectionProps> = ({
         <div className={`grid grid-cols-1 ${gridClass} gap-8 md:gap-10`}>
           {members.map((member, idx) => (
             <ScrollReveal key={idx} delay={idx * 100}>
-              <div className="flex flex-col h-full bg-white rounded-[24px] overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-50 hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all duration-300 group">
+              <div className="flex flex-col h-full bg-white rounded-[24px] overflow-hidden border border-gray-50 transition-all duration-300 group">
                 {member.imageSrc ? (
                   <div className={`w-full ${columns === 2 ? 'h-[350px] lg:h-[450px]' : 'h-[300px] lg:h-[350px]'} overflow-hidden bg-gray-100`}>
                     <img 

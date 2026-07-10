@@ -35,7 +35,8 @@ const HeroSection: React.FC<HeroSectionProps> = ({
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
       </div>
 
-      <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between self-stretch py-[100px] lg:py-[119px] px-6 md:px-12 lg:px-[120px] h-full flex-1 gap-10 mt-[100px] lg:mt-[120px]">
+      <div className="relative z-10 flex justify-center self-stretch py-[100px] lg:py-[119px] px-6 md:px-12 lg:px-[120px] h-full flex-1 mt-[100px] lg:mt-[120px]">
+        <div className="flex flex-col lg:flex-row items-center justify-between w-full max-w-[1400px] gap-10 h-full">
         {/* Left Content */}
         <div className="flex flex-col shrink-0 items-start pb-[1px] gap-8 max-w-[600px]">
             <div className="flex flex-col items-start gap-4">
@@ -64,6 +65,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
         {showRightContent && (
             <ImpactCarousel />
         )}
+        </div>
       </div>
     </div>
   );

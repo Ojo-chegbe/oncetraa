@@ -9,7 +9,7 @@ const Contact = () => {
       <HeroSection 
         headline={"Let's Build the Future of Cancer Care Together."}
         subHeadline={"Whether you are looking to partner with us, cover our story in the press, or ask a question about our work, our team is ready to connect."}
-        bgImage="/home/banner.png"
+        bgImage="/images/heroes/contact.png"
         showRightContent={false}
       />
 
@@ -39,7 +39,7 @@ const Contact = () => {
 
       <ScrollReveal>
         <div className="flex flex-col items-center self-stretch py-20 px-[20px] md:px-[60px] lg:px-[120px] bg-[#F4F5F6]">
-          <div className="w-full max-w-[900px] bg-white p-10 md:p-14 rounded-[32px] shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100">
+          <div className="w-full max-w-[900px] bg-white p-10 md:p-14 rounded-[32px] border border-gray-100">
               <div className="text-center mb-10">
                 <h3 className="text-[#222222] text-3xl font-bold mb-4">Send us a message</h3>
                 <p className="text-[#727272] text-lg max-w-[600px] mx-auto">

@@ -10,7 +10,7 @@ const GetInvolvedVolunteer = () => {
       <HeroSection 
         headline={"Give Your Time to Something That Matters."}
         subHeadline={"Oncetra's work happens in communities — in fields where medicinal plants are grown, in clinics where screenings happen, in schools and meeting halls where awareness is built. Volunteers are the heartbeat of this effort."}
-        bgImage="/home/banner.png"
+        bgImage="/images/heroes/volunteer.png"
         showRightContent={false}
       />
 
@@ -34,7 +34,7 @@ const GetInvolvedVolunteer = () => {
 
       <ScrollReveal>
         <div className="flex flex-col items-center self-stretch py-[80px] px-[20px] md:px-[60px] lg:px-[120px] bg-[#F4F5F6]">
-          <div className="w-full max-w-[900px] bg-white p-10 md:p-14 rounded-[32px] shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100">
+          <div className="w-full max-w-[900px] bg-white p-10 md:p-14 rounded-[32px] border border-gray-100">
               <div className="text-center mb-10">
                 <h3 className="text-[#222222] text-3xl font-bold mb-4">Volunteer Application</h3>
                 <p className="text-[#727272] text-lg max-w-[600px] mx-auto">

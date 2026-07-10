@@ -12,7 +12,7 @@ const ResourcesScience = () => {
         <HeroSection 
           headline="What Does the Science Actually Say?"
           subHeadline="At Oncetra, we believe in the potential of plant-based medicine — and we believe in telling the truth about where the evidence is strong, where it is promising but preliminary, and where it is still unclear."
-          bgImage="/resources/science_hero.png"
+          bgImage="/images/heroes/science.png"
           showRightContent={false}
         />
       </ScrollReveal>
@@ -87,7 +87,7 @@ const ResourcesScience = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-[1000px] mx-auto">
-            <div className="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm flex flex-col gap-3">
+            <div className="bg-white p-8 rounded-2xl border border-gray-100 flex flex-col gap-3">
               <span className="w-12 h-12 bg-green-50 text-[#39A46B] flex items-center justify-center rounded-full text-xl mb-2">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
               </span>
@@ -95,7 +95,7 @@ const ResourcesScience = () => {
               <p className="text-[#727272]">Cell line studies are a necessary early step, but they do not confirm clinical benefit in humans.</p>
             </div>
             
-            <div className="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm flex flex-col gap-3">
+            <div className="bg-white p-8 rounded-2xl border border-gray-100 flex flex-col gap-3">
               <span className="w-12 h-12 bg-green-50 text-[#39A46B] flex items-center justify-center rounded-full text-xl mb-2">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
               </span>
@@ -103,7 +103,7 @@ const ResourcesScience = () => {
               <p className="text-[#727272]">A finding in 50 patients is very different from a finding in 5,000.</p>
             </div>
             
-            <div className="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm flex flex-col gap-3">
+            <div className="bg-white p-8 rounded-2xl border border-gray-100 flex flex-col gap-3">
               <span className="w-12 h-12 bg-green-50 text-[#39A46B] flex items-center justify-center rounded-full text-xl mb-2">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
               </span>
@@ -111,7 +111,7 @@ const ResourcesScience = () => {
               <p className="text-[#727272]">Ensure the study was published in a reputable, peer-reviewed scientific journal.</p>
             </div>
             
-            <div className="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm flex flex-col gap-3">
+            <div className="bg-white p-8 rounded-2xl border border-gray-100 flex flex-col gap-3">
               <span className="w-12 h-12 bg-green-50 text-[#39A46B] flex items-center justify-center rounded-full text-xl mb-2">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
               </span>

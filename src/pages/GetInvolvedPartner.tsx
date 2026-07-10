@@ -1,6 +1,6 @@
 import React from 'react';
 import HeroSection from '../components/HeroSection';
-import GridSection from '../components/GridSection';
+import CarouselSection from '../components/CarouselSection';
 import ScrollReveal from '../components/ScrollReveal';
 import Button from '../components/Button';
 
@@ -10,43 +10,43 @@ const GetInvolvedPartner = () => {
       <HeroSection 
         headline={"Your Organisation Can Help Change Cancer Outcomes."}
         subHeadline={"Oncetra is building a broad coalition of partners across research, clinical care, agriculture, and business. We welcome partnerships at every level to scale our impact across Africa."}
-        bgImage="/home/banner.png"
+        bgImage="/images/heroes/partner.png"
         showRightContent={false}
       />
 
       <ScrollReveal>
-        <GridSection 
-          headline="Partnership Opportunities"
-          subHeadline="We believe that systemic problems require systemic collaboration. Find where your organization fits within the Oncetra ecosystem."
-          bgWhite={true}
-          cards={[
-            {
-              title: "Research Partnerships",
-              description: "For universities and independent research institutions. Co-investigate the clinical potential of our plant portfolio, design community-level prevention studies, and contribute to peer-reviewed literature.",
-              imageSrc: "/home/partner_eu.png"
-            },
-            {
-              title: "Clinical Partnerships",
-              description: "For hospitals, specialist oncology centres, and diagnostic laboratories. Join our screening network, refer patients to Oncetra resources, and participate in treatment optimization programs.",
-              imageSrc: "/home/partner_clinical.png"
-            },
-            {
-              title: "Agricultural Partnerships",
-              description: "For landowners and cooperatives. Help us scale the cultivation of soursop and medicinal plants. We provide agronomic guidance and guaranteed offtake. You provide land and local knowledge.",
-              imageSrc: "/home/first_step.png"
-            },
-            {
-              title: "Corporate Philanthropy",
-              description: "For businesses and foundations. Make a measurable contribution to health equity by sponsoring awareness campaigns, funding mobile screening, or supporting youth career development.",
-              imageSrc: "/home/treatment.png"
-            }
-          ]}
-        />
+          <CarouselSection 
+            headline="Partnership Opportunities"
+            subHeadline="We believe that systemic problems require systemic collaboration. Find where your organization fits within the Oncetra ecosystem."
+            bgWhite={true}
+            cards={[
+              {
+                title: "Research Partnerships",
+                description: "For universities and independent research institutions. Co-investigate the clinical potential of our plant portfolio, design community-level prevention studies, and contribute to peer-reviewed literature.",
+                imageSrc: "/home/partner_eu.png"
+              },
+              {
+                title: "Clinical Partnerships",
+                description: "For hospitals, specialist oncology centres, and diagnostic laboratories. Join our screening network, refer patients to Oncetra resources, and participate in treatment optimization programs.",
+                imageSrc: "/home/partner_clinical.png"
+              },
+              {
+                title: "Agricultural Partnerships",
+                description: "For landowners and cooperatives. Help us scale the cultivation of soursop and medicinal plants. We provide agronomic guidance and guaranteed offtake. You provide land and local knowledge.",
+                imageSrc: "/home/first_step.png"
+              },
+              {
+                title: "Corporate Philanthropy",
+                description: "For businesses and foundations. Make a measurable contribution to health equity by sponsoring awareness campaigns, funding mobile screening, or supporting youth career development.",
+                imageSrc: "/home/treatment.png"
+              }
+            ]}
+          />
       </ScrollReveal>
 
       <ScrollReveal>
         <div className="flex flex-col items-center self-stretch py-[80px] px-[20px] md:px-[60px] lg:px-[120px] bg-[#F4F5F6]">
-          <div className="w-full max-w-[900px] bg-white p-10 md:p-14 rounded-[32px] shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100">
+          <div className="w-full max-w-[900px] bg-white p-10 md:p-14 rounded-[32px] border border-gray-100">
               <div className="text-center mb-10">
                 <h3 className="text-[#222222] text-3xl font-bold mb-4">To Discuss a Partnership</h3>
                 <p className="text-[#727272] text-lg max-w-[600px] mx-auto">

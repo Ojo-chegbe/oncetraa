@@ -93,7 +93,7 @@ const Navbar = () => {
 
           <div className="hidden lg:block">
             <Button to="/get-involved/partner" variant="primary">
-              Donate Now
+              Partner With Us
             </Button>
           </div>
 
@@ -174,7 +174,7 @@ const Navbar = () => {
 
           <div className="mt-8 pt-8 border-t border-gray-100 pb-8">
             <Button to="/get-involved/partner" variant="primary" className="w-full justify-center py-4 text-lg" onClick={toggleMobileMenu}>
-              Donate Now
+              Partner With Us
             </Button>
           </div>
         </div>

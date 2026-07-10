@@ -35,7 +35,7 @@ const ImpactCarousel = () => {
   }, []);
 
   return (
-    <div className="flex items-center bg-white rounded-2xl p-0 shadow-2xl max-w-[520px] lg:self-end mt-10 lg:mt-0 mb-10 translate-y-0 lg:translate-y-10 relative overflow-hidden h-[240px] lg:h-[284px] w-full">
+    <div className="flex items-center bg-white rounded-2xl p-0 max-w-[520px] lg:self-end mt-10 lg:mt-0 mb-10 translate-y-0 lg:translate-y-10 relative overflow-hidden h-[240px] lg:h-[284px] w-full">
       {carouselData.map((item, idx) => (
         <div 
           key={item.id}

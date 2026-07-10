@@ -10,7 +10,7 @@ const GetInvolvedCommunity = () => {
       <HeroSection 
         headline={"Cancer Awareness Belongs in Every Community."}
         subHeadline={"Oncetra's community programs bring cancer education directly to the people who need it — in local languages, through trusted community voices, and in spaces that feel familiar rather than clinical."}
-        bgImage="/home/education_support.png"
+        bgImage="/images/heroes/community.png"
         showRightContent={false}
       />
 

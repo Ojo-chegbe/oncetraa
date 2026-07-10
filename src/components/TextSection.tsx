@@ -14,8 +14,9 @@ const TextSection: React.FC<TextSectionProps> = ({
   bgWhite = true
 }) => {
   return (
-    <div className={`flex flex-col items-center self-stretch py-16 md:py-20 px-6 md:px-12 lg:px-[120px] ${bgWhite ? 'bg-white' : 'bg-[#F4F5F6]'}`}>
-      <div className="w-full max-w-[900px] flex flex-col items-start gap-8">
+    <div className={`flex justify-center self-stretch py-16 md:py-20 px-6 md:px-12 lg:px-[120px] ${bgWhite ? 'bg-white' : 'bg-[#F4F5F6]'}`}>
+      <div className="w-full max-w-[1400px] flex justify-center">
+        <div className="w-full max-w-[900px] flex flex-col items-start gap-8">
         {(headline || subHeadline) && (
           <div className="flex flex-col items-start gap-4 mb-4">
             {headline && (
@@ -32,6 +33,7 @@ const TextSection: React.FC<TextSectionProps> = ({
         )}
         <div className="text-[#444444] text-lg leading-relaxed space-y-6 w-full">
           {children}
+          </div>
         </div>
       </div>
     </div>

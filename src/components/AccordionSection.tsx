@@ -28,10 +28,10 @@ const AccordionSection: React.FC<AccordionSectionProps> = ({
   const [openIndex, setOpenIndex] = useState<number>(0);
 
   return (
-    <div className="py-20 px-[20px] md:px-[60px] lg:px-[120px] bg-[#F4F5F6]">
-      <div className="max-w-[1200px] mx-auto flex flex-col lg:flex-row items-start gap-12 lg:gap-20">
+    <div className="flex justify-center py-20 px-6 md:px-12 lg:px-[120px] bg-[#F4F5F6]">
+      <div className="w-full max-w-[1400px] flex flex-col lg:flex-row items-start gap-12 lg:gap-20">
         {/* Left Side: Image */}
-        <div className="w-full lg:w-[45%] shrink-0 rounded-[24px] overflow-hidden shadow-lg h-[450px] lg:h-[550px] relative">
+        <div className="w-full lg:w-[45%] shrink-0 rounded-[24px] overflow-hidden h-[450px] lg:h-[550px] relative">
           <img src={imageSrc} alt={headline} className="w-full h-full object-cover" />
           {/* Subtle gradient overlay at bottom like the image */}
           <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-black/50 to-transparent pointer-events-none"></div>
@@ -40,7 +40,7 @@ const AccordionSection: React.FC<AccordionSectionProps> = ({
         {/* Right Side: Content */}
         <div className="w-full lg:flex-1 flex flex-col pt-2 lg:pt-8">
           {/* Tag */}
-          <div className="inline-flex items-center gap-2 bg-white px-3 py-1.5 rounded-lg shadow-sm w-max mb-6">
+          <div className="inline-flex items-center gap-2 bg-white px-3 py-1.5 rounded-lg w-max mb-6">
             <div className="bg-[#39A46B] text-white rounded-[6px] p-1">
               <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
@@ -63,7 +63,7 @@ const AccordionSection: React.FC<AccordionSectionProps> = ({
               return (
                 <div 
                   key={idx} 
-                  className="bg-white rounded-[16px] p-5 shadow-sm cursor-pointer transition-all border border-gray-100"
+                  className="bg-white rounded-[16px] p-5 cursor-pointer transition-all border border-gray-100"
                   onClick={() => setOpenIndex(isOpen ? -1 : idx)}
                 >
                   <div className="flex justify-between items-center gap-4">

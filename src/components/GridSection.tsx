@@ -28,7 +28,8 @@ const GridSection: React.FC<GridSectionProps> = ({
   columns = 3
 }) => {
   return (
-    <div className={`flex flex-col items-center self-stretch py-16 md:py-24 px-6 md:px-12 lg:px-[120px] ${bgWhite ? 'bg-white' : 'bg-[#F4F5F6]'}`}>
+    <div className={`flex justify-center self-stretch py-16 md:py-24 px-6 md:px-12 lg:px-[120px] ${bgWhite ? 'bg-white' : 'bg-[#F4F5F6]'}`}>
+      <div className="flex flex-col items-center w-full max-w-[1400px]">
       
       {(headline || subHeadline) && (
         <div className="flex flex-col items-center mb-[60px] gap-5 text-center">
@@ -45,7 +46,7 @@ const GridSection: React.FC<GridSectionProps> = ({
         </div>
       )}
 
-      <div className={`grid grid-cols-1 ${columns === 2 ? 'md:grid-cols-2 max-w-[1440px]' : 'md:grid-cols-2 lg:grid-cols-3 max-w-[1440px]'} gap-8 w-full`}>
+      <div className={`grid grid-cols-1 ${columns === 2 ? 'md:grid-cols-2' : 'md:grid-cols-2 lg:grid-cols-3'} gap-8 w-full mt-12 lg:mt-16`}>
         {cards.map((card, index) => (
           <div key={index} className="flex flex-col items-start bg-white p-6 rounded-[24px] border border-[#0000000D]">
             {card.imageSrc && (
@@ -83,6 +84,7 @@ const GridSection: React.FC<GridSectionProps> = ({
         ))}
       </div>
       
+      </div>
     </div>
   );
 };

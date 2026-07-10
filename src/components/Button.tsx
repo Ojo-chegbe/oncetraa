@@ -20,7 +20,7 @@ const Button: React.FC<ButtonProps> = ({
   className = '',
   showIcon = true,
 }) => {
-  const baseClasses = "group relative inline-flex items-center rounded-full overflow-hidden transition-all shadow-sm w-max font-medium";
+  const baseClasses = "group relative inline-flex items-center rounded-full overflow-hidden transition-all w-max font-medium";
   
   let variantClasses = "";
   let circleClasses = "absolute top-1/2 -translate-y-1/2 rounded-full transition-transform duration-500 ease-out origin-center group-hover:scale-[25] z-0";

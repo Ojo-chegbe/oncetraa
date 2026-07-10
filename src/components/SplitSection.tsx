@@ -18,13 +18,14 @@ const SplitSection: React.FC<SplitSectionProps> = ({
   bgWhite = false
 }) => {
   return (
-    <div className={`flex flex-col lg:flex-row items-center self-stretch py-16 md:py-24 px-6 md:px-12 lg:px-[120px] gap-10 lg:gap-[55px] ${bgWhite ? 'bg-white' : 'bg-[#F4F5F6]'}`}>
+    <div className={`flex justify-center self-stretch py-16 md:py-24 px-6 md:px-12 lg:px-[120px] ${bgWhite ? 'bg-white' : 'bg-[#F4F5F6]'}`}>
+      <div className="flex flex-col lg:flex-row items-center w-full max-w-[1400px] gap-10 lg:gap-[55px]">
       
       {!imageOnRight && imageSrc && (
         <div className="flex flex-1 flex-col relative">
           <img
             src={imageSrc} 
-            className="w-full h-full min-h-[300px] lg:min-h-[400px] lg:h-[635px] rounded-3xl object-cover shadow-sm"
+            className="w-full h-full min-h-[300px] lg:min-h-[400px] lg:h-[635px] rounded-3xl object-cover"
             alt={headline}
           />
         </div>
@@ -54,12 +55,13 @@ const SplitSection: React.FC<SplitSectionProps> = ({
         <div className="flex flex-1 flex-col relative">
           <img
             src={imageSrc} 
-            className="w-full h-full min-h-[300px] lg:min-h-[400px] lg:h-[635px] rounded-3xl object-cover shadow-sm"
+            className="w-full h-full min-h-[300px] lg:min-h-[400px] lg:h-[635px] rounded-3xl object-cover"
             alt={headline}
           />
         </div>
       )}
       
+      </div>
     </div>
   );
 };

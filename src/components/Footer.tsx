@@ -3,96 +3,153 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
-    <div className="flex flex-col self-stretch bg-[#122922] pt-16 md:pt-[120px] pb-[29px] px-6 md:px-12 lg:px-[120px] gap-[30px]">
-        <div className="flex flex-col self-stretch gap-[17px]">
-            <div className="flex flex-col xl:flex-row items-center self-stretch gap-4">
-                
-                {/* Newsletter Box */}
-                <div className="flex flex-col w-full xl:w-auto shrink-0 items-start py-10 md:py-[39px] px-6 md:px-10 gap-8 md:gap-[39px] rounded-2xl border border-solid border-[#0000000D] bg-[#0C201A]">
-                    <div className="flex flex-col items-start xl:items-center gap-4 md:gap-[19px]">
-                        <div className="flex flex-col items-start md:pr-14">
-                            <span className="text-white text-3xl md:text-5xl xl:w-[349px]">
-                                {"Stay Connected \nWith Our Impact"}
-                            </span>
-                        </div>
-                        <span className="text-white text-lg md:text-xl md:w-[400px]">
-                            {"Get stories, updates, and real impact reports \ndelivered to your inbox."}
-                        </span>
-                    </div>
-                    <div className="flex flex-col sm:flex-row items-center p-2 rounded-2xl sm:rounded-[63px] border border-solid border-[#8888881A] bg-white w-full gap-2">
-                        <input 
-                            type="email" 
-                            placeholder="Your Email Address" 
-                            className="bg-transparent border-none outline-none text-black text-base flex-1 px-4 py-2 w-full text-center sm:text-left" 
-                        />
-                        <button className="bg-[#39A46B] text-white py-3 sm:py-2 px-6 rounded-[63px] w-full sm:w-auto hover:bg-[#2d8555] transition-colors">
-                            Subscribe
-                        </button>
-                    </div>
-                </div>
+    <div className="flex justify-center self-stretch bg-[#122922] pt-16 md:pt-[120px] pb-[29px] px-6 md:px-12 lg:px-[120px]">
+      <div className="flex flex-col w-full max-w-[1400px] gap-8">
+        
+        {/* Footer Layout */}
+        <div className="flex flex-col gap-4">
+          
+          {/* Top Row */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+          
+          {/* Top Left: Newsletter */}
+          <div className="flex flex-col items-start py-10 md:py-16 px-8 md:px-12 gap-8 rounded-[32px] bg-[#0C201A]">
+            <h2 className="text-white text-4xl md:text-5xl font-bold leading-tight">
+              {"Stay Connected"}<br/>{"With Our Impact"}
+            </h2>
+            <p className="text-white/80 text-lg md:text-xl max-w-md leading-relaxed">
+              {"Get stories, updates, and real impact reports delivered to your inbox."}
+            </p>
+            
+            <div className="flex items-center p-2 rounded-full border border-white/10 bg-[#122922] w-full max-w-md mt-4 relative">
+              <input 
+                type="email" 
+                placeholder="Your Email Address" 
+                className="bg-transparent border-none outline-none text-white text-base px-6 py-2 w-full placeholder:text-white/40" 
+              />
+              <button className="flex items-center justify-center shrink-0 w-12 h-12 bg-[#39A46B] text-white rounded-full hover:bg-[#2d8555] transition-colors ml-2">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </button>
+            </div>
+          </div>
 
-                {/* Links Box */}
-                <div className="flex flex-1 w-full flex-col md:flex-row justify-between items-start pt-10 pb-16 md:pb-[91px] px-6 md:px-10 rounded-2xl border border-solid border-[#ffffff1a] bg-[#0C201A] gap-10 md:gap-4">
-                    
-                    <div className="flex flex-col shrink-0 items-start pr-4 gap-4 md:gap-[19px]">
-                        <span className="text-[#39A46B] text-lg font-medium">
-                            {"Company"}
-                        </span>
-                        <div className="flex flex-col items-start gap-3 md:gap-[15px]">
-                            <Link to="/" className="text-white text-base hover:text-[#39A46B] transition-colors">Home</Link>
-                            <Link to="/about/story" className="text-white text-base hover:text-[#39A46B] transition-colors">About</Link>
-                            <Link to="/approach" className="text-white text-base hover:text-[#39A46B] transition-colors">Approach</Link>
-                            <Link to="/products" className="text-white text-base hover:text-[#39A46B] transition-colors">Products</Link>
-                        </div>
-                    </div>
-
-                    <div className="flex flex-col shrink-0 items-start pr-[38px] gap-4 md:gap-[19px]">
-                        <span className="text-[#39A46B] text-lg font-medium">
-                            {"More"}
-                        </span>
-                        <div className="flex flex-col items-start gap-3 md:gap-[15px]">
-                            <Link to="/resources/cancer-awareness" className="text-white text-base hover:text-[#39A46B] transition-colors">Resources</Link>
-                            <Link to="/get-involved/volunteer" className="text-white text-base hover:text-[#39A46B] transition-colors">Volunteer</Link>
-                            <Link to="/contact" className="text-white text-base hover:text-[#39A46B] transition-colors">Contact</Link>
-                            <Link to="/privacy-policy" className="text-white text-base hover:text-[#39A46B] transition-colors">Privacy Policy</Link>
-                        </div>
-                    </div>
-
-                    <div className="flex flex-col shrink-0 items-start gap-4 md:gap-[19px]">
-                        <span className="text-[#39A46B] text-lg font-medium">
-                            {"Contact"}
-                        </span>
-                        <div className="flex flex-col items-start gap-4 md:gap-[23px]">
-                            <div className="flex items-center gap-[7px]">
-                                <a href="mailto:contact@oncetra.com" className="text-white text-base hover:text-[#39A46B] transition-colors">
-                                    {"contact@oncetra.com"}
-                                </a>
-                            </div>
-                            <div className="flex items-center gap-[7px]">
-                                <a href="mailto:press@oncetra.com" className="text-white text-base hover:text-[#39A46B] transition-colors">
-                                    {"press@oncetra.com"}
-                                </a>
-                            </div>
-                            <div className="flex items-center gap-[7px]">
-                                <a href="mailto:partnerships@oncetra.com" className="text-white text-base hover:text-[#39A46B] transition-colors">
-                                    {"partnerships@oncetra.com"}
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
+          {/* Top Right: Links */}
+          <div className="flex flex-col sm:flex-row justify-between items-start py-10 md:py-16 px-8 md:px-12 rounded-[32px] bg-[#0C201A] gap-10 sm:gap-4">
+            
+            <div className="flex flex-col items-start gap-6 w-full sm:w-auto">
+                <span className="text-[#39A46B] text-lg font-medium">Company</span>
+                <div className="flex flex-col items-start gap-5">
+                    <Link to="/" className="text-white font-medium text-[17px] hover:text-[#39A46B] transition-colors">Home</Link>
+                    <Link to="/about/story" className="text-white font-medium text-[17px] hover:text-[#39A46B] transition-colors">About</Link>
+                    <Link to="/approach" className="text-white font-medium text-[17px] hover:text-[#39A46B] transition-colors">Approach</Link>
+                    <Link to="/products" className="text-white font-medium text-[17px] hover:text-[#39A46B] transition-colors">Products</Link>
                 </div>
             </div>
+
+            <div className="flex flex-col items-start gap-6 w-full sm:w-auto">
+                <span className="text-[#39A46B] text-lg font-medium">More</span>
+                <div className="flex flex-col items-start gap-5">
+                    <Link to="/get-involved/partner" className="text-white font-medium text-[17px] hover:text-[#39A46B] transition-colors">Partner</Link>
+                    <Link to="/resources/cancer-awareness" className="text-white font-medium text-[17px] hover:text-[#39A46B] transition-colors">Resources</Link>
+                    <Link to="/get-involved/volunteer" className="text-white font-medium text-[17px] hover:text-[#39A46B] transition-colors">Volunteer</Link>
+                    <Link to="/contact" className="text-white font-medium text-[17px] hover:text-[#39A46B] transition-colors">Contact</Link>
+                </div>
+            </div>
+
+            <div className="flex flex-col items-start gap-6 w-full sm:w-[250px]">
+                <span className="text-[#39A46B] text-lg font-medium">Contact</span>
+                <div className="flex flex-col items-start gap-6">
+                    <div className="flex items-start gap-3">
+                        <svg className="w-6 h-6 text-[#39A46B] mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                        </svg>
+                        <span className="text-white font-medium text-[17px]">Victoria Island, Lagos, Nigeria</span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                        <svg className="w-6 h-6 text-[#39A46B] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                        </svg>
+                        <a href="mailto:contact@oncetra.com" className="text-white font-medium text-[17px] hover:text-[#39A46B] transition-colors">contact@oncetra.com</a>
+                    </div>
+                </div>
+            </div>
+
+          </div>
+
+          </div>
+
+          {/* Bottom Row */}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
+
+          {/* Bottom Left: Logo Watermark */}
+          <div className="lg:col-span-2 flex items-center justify-center py-20 px-8 rounded-[32px] bg-[#0C201A] overflow-hidden relative min-h-[300px]">
+            <svg 
+              className="absolute w-[120%] h-auto max-w-[800px] text-white/[0.03] select-none pointer-events-none" 
+              viewBox="0 0 110 36" 
+              fill="none" 
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path 
+                fillRule="evenodd" 
+                clipRule="evenodd" 
+                d="M14.7903 23.3407C16.3546 25.9646 16.4165 29.0036 15.0496 31.7744C14.55 32.7871 14.1625 33.194 13.3731 33.9891C12.5076 34.8607 11.0537 35.6158 9.86691 35.8185C9.69727 35.8477 9.59298 35.8826 9.4529 35.9006C7.71157 36.124 6.16747 35.9533 4.56127 35.3087C3.62291 34.9319 2.6704 34.2776 2.02392 33.5022L1.79307 33.2362C1.64388 33.0446 1.5212 32.8923 1.38771 32.6892C0.0603037 30.6727 0 29.4556 0 27.1164C0 26.4714 0.136202 26.0108 0.258251 25.427C0.460075 24.4622 1.22113 22.9728 1.91016 22.2337L2.3861 21.758C3.94399 20.2157 5.64439 19.6529 7.97226 19.6529C9.47516 19.6529 10.5784 19.7351 11.8569 20.4803L12.4833 20.8466C12.6103 20.9264 12.6559 20.9805 12.7634 21.063C13.5525 21.6693 13.8536 22.0171 14.4162 22.7626C14.5499 22.9394 14.6724 23.1432 14.7904 23.3406L14.7903 23.3407ZM54.153 3.56417C54.8918 4.1581 55.8119 4.8854 56.44 5.62301C56.6378 5.8551 57.2444 6.41347 57.2925 6.66692C57.4496 6.68936 57.8123 7.28121 57.9295 7.44507C57.9976 7.54008 58.0628 7.615 58.1248 7.7053L58.8486 8.8861C59.7652 10.5953 60.9228 14.1148 61.0915 16.0882C61.1137 16.3473 61.1321 16.7357 61.164 16.9692C61.2112 17.3138 61.1339 17.521 61.1339 17.8285L58.16 17.8699C58.194 16.3393 58.1451 15.4568 57.5757 13.9368C57.521 13.7907 57.399 13.6081 57.4575 13.4334C57.3362 13.3431 57.3091 13.2295 57.2447 13.0667C57.0218 12.501 57.0068 12.5272 56.7422 11.9953C56.5396 11.5882 56.2048 11.1037 55.9577 10.71C55.5319 10.0306 55.0907 9.52075 54.5954 8.92619C54.3627 8.64668 54.1458 8.56344 54.125 8.37469C53.9437 8.31832 53.7409 8.06587 53.606 7.92897L52.5831 7.04839C52.4077 6.91385 52.2304 6.76916 52.055 6.63326C51.829 6.49925 51.6347 6.33665 51.3988 6.20554C51.1576 6.07172 50.9834 5.96124 50.7487 5.82135C50.2984 5.55316 49.7855 5.36776 49.3131 5.14047C49.1931 5.10998 49.0368 5.04121 48.8913 4.99072L48.0661 4.69955C47.9191 4.65123 47.7861 4.63087 47.6681 4.57341C47.488 4.54654 47.4281 4.51279 47.2586 4.47361C47.1236 4.4423 47.0531 4.42149 46.8943 4.38322L45.326 4.09159C45.1913 4.06888 44.6341 4.03413 44.5288 4.00011C44.3323 3.96265 44.1346 3.98618 43.933 3.95568C43.7427 3.92709 43.5312 3.93822 43.3309 3.93822C42.9179 3.9384 42.5048 3.93822 42.092 3.93822C41.9148 4.01739 41.7473 3.96129 41.5193 3.98554L39.793 4.22867C39.6217 4.31753 39.3607 4.34684 39.1895 4.38349L37.7544 4.80921C37.6372 4.84866 37.6067 4.87744 37.4891 4.89001C37.4972 4.91155 37.496 4.92168 37.4707 4.89191L36.1377 5.46675C35.681 5.65287 34.7352 6.19224 34.3261 6.46749C33.0623 7.31803 33.2613 7.23859 32.2133 8.07845L30.4609 10.0511C29.7556 10.9903 28.8497 12.5661 28.4132 13.6346C27.39 16.1406 27.3054 17.3365 27.3039 19.9846C27.3036 20.3304 27.3462 20.5621 27.3466 20.854C27.3486 22.6392 27.7618 22.8139 27.7572 24.1655L27.4279 24.2139C27.2786 23.99 27.157 23.7324 27.0608 23.4631C26.7495 22.5917 26.5682 21.8051 26.4134 20.8373C26.311 20.1977 26.2207 19.5428 26.1534 18.9005C26.1238 18.6172 26.0502 17.0715 26.0886 16.816C26.1396 16.4778 26.1174 16.119 26.1646 15.7728L26.4676 13.8793C26.5326 13.5518 26.6049 13.2964 26.676 13.0104C26.928 11.9981 27.3693 10.6851 27.8271 9.77094C28.5264 8.37478 29.0686 7.61129 29.9887 6.42587L30.7562 5.53778C30.8586 5.40477 30.897 5.36867 31.0113 5.25484C31.2009 5.06555 31.3587 4.90585 31.5476 4.71529L32.7281 3.70251C32.8451 3.60733 32.9335 3.52924 33.053 3.44844C33.1737 3.36673 33.2564 3.31389 33.3702 3.22766C33.8179 2.8878 33.9824 2.827 34.3673 2.57003C34.4831 2.49258 34.5798 2.44652 34.7057 2.37069C35.1581 2.09798 36.0218 1.66683 36.5269 1.46216C36.6876 1.39719 36.7804 1.31783 36.9283 1.36742C36.998 1.25594 36.8734 1.32734 37.0866 1.23341L38.2262 0.846057C38.4817 0.773308 38.6437 0.718928 38.9026 0.654233C39.0737 0.611887 39.4406 0.47381 39.6131 0.538234C39.7174 0.405676 39.7501 0.436078 39.9379 0.407395C40.0417 0.391651 40.1542 0.360254 40.2429 0.341071C40.4772 0.290401 40.6231 0.273299 40.8765 0.230591C41.2706 0.164448 41.8125 0.0508018 42.2569 0.0918811C42.2654 0.0852758 42.2784 0.079123 42.2855 0.076499L42.8703 0.0346054C43.5953 -0.0466483 43.9868 0.0406677 44.6558 0.0406677L46.2165 0.212314C46.4516 0.252307 46.7077 0.28651 46.9559 0.34089C47.051 0.361701 47.533 0.437797 47.5856 0.496702C47.8522 0.512446 48.8714 0.814569 49.0723 0.911295C49.3485 0.9759 49.575 1.08041 49.8417 1.17578C50.1176 1.27422 50.3087 1.36724 50.5773 1.47401C50.738 1.53753 50.8002 1.57137 50.9445 1.6443C51.0762 1.71071 51.1556 1.73369 51.2894 1.79577C51.4123 1.85286 51.4986 1.89801 51.6195 1.96189C51.9488 2.13571 51.8416 2.03184 51.9226 2.17127C52.0645 2.17815 52.3041 2.33903 52.4675 2.43765L53.6991 3.23137C53.8795 3.34574 53.863 3.34384 53.9052 3.44038C54.0129 3.41632 53.9501 3.4013 54.1529 3.56426L54.153 3.56417ZM24.2224 23.0362L28.9028 29.8239C29.3143 30.3715 29.6651 30.9103 30.1222 31.4607C30.2305 31.591 30.1544 31.5498 30.2779 31.5947V19.9846H32.5084V35.6995H30.3192C30.1965 35.171 29.6739 34.5591 29.375 34.1594L28.0474 32.3822C27.9589 32.257 27.888 32.1442 27.7932 32.0155L24.5445 27.2328C24.4615 27.1074 24.403 27.0103 24.3122 26.8851L22.2649 24.1304C22.223 24.1005 22.2577 24.11 22.1818 24.0896V35.6995H20.2403C20.1451 35.6995 20.1164 35.6706 20.1164 35.5751V20.1091C20.1164 20.0135 20.1451 19.9847 20.2403 19.9847C21.216 19.9847 21.8943 19.8316 22.3419 20.4045C22.9834 21.2259 23.6233 22.1734 24.2224 23.0363V23.0362ZM81.0439 19.9846H87.0746C88.3256 19.9846 89.4813 20.274 90.4523 21.0721C90.6686 21.25 90.8466 21.3952 91.0171 21.6249C91.2392 21.924 91.293 21.9642 91.467 22.2927C92.3764 24.0108 92.3127 25.8731 91.2053 27.4481C91.0508 27.6679 90.8859 27.8512 90.6892 28.0495C90.5797 28.1602 90.4883 28.2188 90.3734 28.313C90.2308 28.4301 90.2465 28.4353 90.0666 28.544C89.5501 28.8561 89.2573 29.0685 88.5618 29.2313C88.5824 29.4807 89.5376 30.6189 89.7477 30.9015L90.9757 32.4886C91.2202 32.8141 93.3533 35.5439 93.3947 35.6995H90.5445C90.4027 35.0891 89.5152 34.099 89.0988 33.5433C88.5596 32.824 87.4169 31.1389 87.0211 30.6533C86.1632 29.6015 86.0577 29.2757 84.3012 29.4738C84.1433 29.4915 83.9326 29.4797 83.7693 29.4789C83.5324 29.4779 83.4552 29.5172 83.2745 29.5214V35.6994H81.0439V19.9845L81.0439 19.9846ZM83.214 22.0183C84.0134 22.0183 84.7104 21.9344 85.2613 21.9342C85.5136 21.9342 85.5818 21.9716 85.7961 21.9779C86.9394 22.0123 88.7177 22.1082 89.3919 23.054C90.676 24.8549 89.8698 27.6572 86.9127 27.6572H83.1994L83.214 22.0183ZM104.206 21.5717C104.883 23.1624 105.723 25.011 106.335 26.5656C106.409 26.7531 106.468 26.8738 106.542 27.0632L106.979 28.0756C107.894 30.3323 108.773 32.3427 109.646 34.6453C109.718 34.8354 109.777 34.9622 109.84 35.1549L110 35.6995H107.563C107.558 35.4579 107.34 34.8771 107.259 34.6366L106.477 32.6848C106.301 32.2664 106.245 31.7191 106.076 31.7191H99.0124C98.8473 31.7191 98.8489 31.9421 98.7594 32.2114L97.5534 35.23C97.4695 35.3984 97.4004 35.5445 97.3188 35.6995H95.1295C95.1812 35.0759 96.804 31.2472 97.0981 30.5852L100.25 23.1348C100.466 22.6411 100.917 21.6124 101.073 21.1405C101.249 20.6054 101.447 19.9846 102.028 19.9846C103.248 19.9846 103.549 19.8377 103.788 20.5808C103.904 20.9398 104.061 21.2316 104.206 21.5718L104.206 21.5717ZM99.8505 29.4595L102.535 22.5736L105.179 29.4595H99.8505ZM65.7191 19.9846H78.1112V21.892H72.989L73.1129 35.6995H70.8824V21.892H65.7191V19.9846ZM63.9842 33.6791V35.6754C63.6961 35.7823 54.9931 35.6995 53.8641 35.6995V19.9846H57.1016H62.7918C62.8729 19.9839 62.9543 19.9837 63.0341 19.9841C63.0568 19.9843 63.0794 19.9845 63.1019 19.9846C63.2172 19.9847 63.3326 19.9853 63.448 19.9837C63.8516 19.9775 63.7543 19.985 63.8189 20.0412V21.8367C63.5617 21.9441 62.465 21.908 61.527 21.8645L59.2822 21.8919H56.0946V26.9089L62.9514 26.9274C62.9514 27.2666 62.9514 27.6062 62.9514 27.9457L62.9102 28.8579H61.3552C60.9648 28.8579 60.5744 28.8579 60.1839 28.8579C59.772 28.8579 59.4768 28.8162 59.1098 28.8162H57.4987H56.0946V33.6262C57.4164 33.6262 58.7383 33.6262 60.0601 33.6262C60.741 33.6262 63.1407 33.5871 63.7807 33.6223C63.8289 33.625 63.8468 33.6256 63.8935 33.6368C64.0099 33.6642 63.9099 33.6185 63.9842 33.679V33.6791ZM38.9589 21.7666C38.9171 21.7626 38.9821 21.7462 38.9589 21.7666C38.9666 21.7674 38.9776 21.7677 38.9935 21.7673C39.0763 21.5637 39.4244 21.3533 39.613 21.2283C39.7221 21.1561 39.8196 21.0909 39.9354 21.0128C40.0628 20.9267 40.1428 20.8866 40.2721 20.8118C40.5029 20.6784 40.739 20.5442 41.0056 20.4287C41.1428 20.3692 41.2622 20.3271 41.3895 20.2748C41.7338 20.1331 41.6334 20.1286 41.8025 20.1917C41.8872 20.0769 41.7937 20.1669 41.9111 20.0958C41.9733 20.0583 41.9305 20.0837 42.0022 20.0576L42.6532 19.8848C42.9013 19.8212 43.3262 19.7186 43.5787 19.7482C43.6564 19.6839 43.5564 19.7422 43.6707 19.7064L45.1309 19.629C45.4738 19.6814 45.8788 19.6717 46.2643 19.7352L46.5711 19.806C46.5765 19.7969 46.5926 19.8134 46.6023 19.8188C47.1102 19.8188 48.3577 20.3537 48.693 20.573C49.2857 20.9604 49.7359 21.3176 50.1465 21.9336L49.6282 22.4498L49.0726 22.97L48.7008 23.3016C48.5114 23.1744 48.3283 23.0531 48.1542 22.8968C47.3749 22.1976 46.6296 22.0591 46.4083 21.892C46.0732 21.8288 45.753 21.7016 45.3899 21.6496C45.0523 21.6013 44.6528 21.5602 44.2865 21.5602C44.2006 21.6107 44.0783 21.6008 43.9925 21.6028C43.2172 21.6229 42.4331 22.0117 42.2005 22.058L42.1143 22.1226C41.7206 22.3535 41.8045 22.2649 41.2902 22.6215L40.8342 22.9931C40.828 22.9989 40.8187 23.0071 40.8125 23.0126L40.3245 23.5181C39.7556 24.1448 39.5809 24.7151 39.3453 25.0733L39.3034 25.1263L38.88 26.629C38.7634 27.2126 38.7243 27.7314 38.7446 28.4447C38.7619 29.0495 39.1014 30.1761 39.3934 30.6958C39.4864 30.8619 39.7064 31.137 39.6962 31.3044C39.8507 31.4019 40.228 31.9443 40.3507 32.0982C40.6782 32.509 41.3871 33.0688 41.8574 33.3224L42.794 33.7506C42.926 33.7615 43.0908 33.8087 43.2376 33.8444C43.8667 33.9967 44.5604 33.9932 44.694 34.0229C44.7839 33.9331 44.6528 33.9827 44.8582 33.9559C44.8854 33.9524 44.9882 33.9574 45.0243 33.9568C45.964 33.9445 46.9707 33.4415 47.0899 33.4326C47.1307 33.3874 47.1059 33.4086 47.1571 33.3647C47.1638 33.3588 47.1735 33.3508 47.1808 33.3449L48.9841 32.0859L50.4357 33.2529C50.3614 33.5327 49.7277 34.1669 49.4632 34.3913C49.0244 34.7642 47.7801 35.5256 47.2684 35.5749C47.0382 35.7077 46.4812 35.7946 46.1816 35.8658C45.9978 35.9093 45.7829 35.9241 45.5741 35.961C45.4156 35.9888 45.1662 35.9896 44.9446 35.9896C44.0633 35.9896 44.1379 36.0386 43.2771 35.9196C42.8813 35.865 42.9431 35.9194 42.8354 35.7824C42.6371 35.8595 42.1876 35.6952 41.9941 35.6315C41.7193 35.5416 41.5131 35.4835 41.2529 35.3804C41.1059 35.3225 41.0244 35.2775 40.8822 35.2136C40.7541 35.1558 40.6745 35.1144 40.5491 35.0505C40.4138 34.9814 40.3547 34.9343 40.2329 34.8705C39.9657 34.7301 40.0098 34.7722 39.9439 34.6215C39.8206 34.6491 39.8809 34.6551 39.7277 34.5504L38.5394 33.5016C38.534 33.4952 38.5262 33.4856 38.5208 33.4789L38.0667 32.9399C36.3812 30.7153 36.0279 26.9745 37.0277 24.4795C37.4327 23.4692 37.8808 22.8985 38.5769 22.0954L38.9242 21.7886C38.9428 21.7787 38.9536 21.7715 38.9591 21.7665L38.9589 21.7666ZM22.6074 12.7157C24.2254 13.4102 24.2038 15.1876 23.3513 16.1414C22.7844 16.7757 22.4039 16.8334 21.6035 16.8334C21.3149 16.8334 20.7036 16.5401 20.4999 16.3655C19.9015 15.8524 19.6208 15.3985 19.6208 14.5112C19.6208 14.0188 20.0336 13.3701 20.3008 13.1205C20.4455 12.9853 20.7236 12.7811 20.9175 12.7029C21.4779 12.477 22.0522 12.477 22.6075 12.7155L22.6074 12.7157ZM13.0216 24.5103C14.178 26.4494 14.2237 28.6956 13.2134 30.7435C12.8442 31.4921 12.5577 31.7927 11.9742 32.3805C11.3348 33.0248 10.2599 33.5828 9.38295 33.7325C9.25739 33.7543 9.18041 33.78 9.07693 33.7931C7.78991 33.9583 6.64864 33.8322 5.4615 33.3557C4.76787 33.0774 4.06406 32.5937 3.58613 32.0206L3.41532 31.8237C3.30508 31.6823 3.21467 31.5696 3.11578 31.4195C2.13497 29.9293 2.09008 29.0297 2.09008 27.3008C2.09008 26.8241 2.19067 26.4836 2.28099 26.0523C2.43018 25.3389 2.99274 24.2382 3.50185 23.692L3.85376 23.3405C5.00521 22.2005 6.26203 21.7845 7.98244 21.7845C9.09324 21.7845 9.90847 21.8451 10.8537 22.396L11.3165 22.6667C11.4103 22.7257 11.4441 22.7657 11.5236 22.8266C12.1068 23.2747 12.3293 23.5319 12.7452 24.083C12.8439 24.2136 12.9345 24.3642 13.0215 24.5103L13.0216 24.5103Z" 
+                fill="currentColor"
+              />
+            </svg>
+          </div>
+
+          {/* Bottom Right: Social Links */}
+          <div className="lg:col-span-1 flex flex-col justify-center px-8 md:px-14 py-10 md:py-16 rounded-[32px] bg-[#0C201A]">
+            <div className="flex flex-col w-full h-full justify-between gap-6">
+              
+              <a href="https://facebook.com" target="_blank" rel="noreferrer" className="flex items-center justify-between pb-6 border-b border-white/5 group cursor-pointer">
+                <span className="text-white text-xl md:text-[26px] font-bold group-hover:text-[#39A46B] transition-colors tracking-tight">Facebook</span>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white group-hover:text-[#39A46B] transition-colors">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </a>
+
+              <a href="https://instagram.com" target="_blank" rel="noreferrer" className="flex items-center justify-between pb-6 border-b border-white/5 group cursor-pointer">
+                <span className="text-white text-xl md:text-[26px] font-bold group-hover:text-[#39A46B] transition-colors tracking-tight">Instagram</span>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white group-hover:text-[#39A46B] transition-colors">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </a>
+
+              <a href="https://twitter.com" target="_blank" rel="noreferrer" className="flex items-center justify-between pb-6 border-b border-white/5 group cursor-pointer">
+                <span className="text-white text-xl md:text-[26px] font-bold group-hover:text-[#39A46B] transition-colors tracking-tight">X</span>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white group-hover:text-[#39A46B] transition-colors">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </a>
+
+              <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="flex items-center justify-between group cursor-pointer pt-2">
+                <span className="text-white text-xl md:text-[26px] font-bold group-hover:text-[#39A46B] transition-colors tracking-tight">Linkedin</span>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white group-hover:text-[#39A46B] transition-colors">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </a>
+
+            </div>
+          </div>
+          
+          </div>
         </div>
         
-        <div className="flex flex-col sm:flex-row justify-between items-center self-stretch pt-6 md:pt-4 border-t border-[#ffffff1a] gap-4 sm:gap-0">
-            <span className="text-[#F4F5F6] text-sm md:text-base text-center">
+        {/* Copyright */}
+        <div className="flex flex-col sm:flex-row justify-between items-center self-stretch pt-8 gap-4 sm:gap-0 mt-4">
+            <span className="text-white text-sm md:text-base font-medium">
                 {"© 2026 Oncetra All Rights Reserved"}
             </span>
-            <span className="text-[#F4F5F6] text-sm md:text-base text-center">
-                {"Made with purpose."}
+            <span className="text-white text-sm md:text-base font-medium">
+                Made with purpose.
             </span>
         </div>
+
+      </div>
     </div>
   );
 };

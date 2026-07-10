@@ -21,8 +21,9 @@ const TimelineSection: React.FC<TimelineSectionProps> = ({
   bgWhite = true
 }) => {
   return (
-    <div className={`py-20 px-[20px] md:px-[60px] lg:px-[120px] ${bgWhite ? 'bg-white' : 'bg-[#F4F5F6]'}`}>
-      <div className="max-w-[1000px] mx-auto">
+    <div className={`flex justify-center py-20 px-6 md:px-12 lg:px-[120px] ${bgWhite ? 'bg-white' : 'bg-[#F4F5F6]'}`}>
+      <div className="w-full max-w-[1400px] flex justify-center">
+        <div className="w-full max-w-[1000px]">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-[#222222] mb-4">
             {headline}
@@ -48,11 +49,11 @@ const TimelineSection: React.FC<TimelineSectionProps> = ({
                     <div className="hidden md:block md:w-1/2"></div>
                     
                     {/* Node / Timeline Dot */}
-                    <div className="absolute left-[20px] md:left-1/2 w-[20px] h-[20px] bg-[#39A46B] rounded-full mt-6 -translate-x-1/2 border-[5px] border-white shadow-sm z-10"></div>
+                    <div className="absolute left-[20px] md:left-1/2 w-[20px] h-[20px] bg-[#39A46B] rounded-full mt-6 -translate-x-1/2 border-[5px] border-white z-10"></div>
                     
                     {/* Content Card */}
                     <div className={`w-full md:w-1/2 pl-12 md:pl-0 ${isEven ? 'md:pr-12 lg:md:pr-16 md:text-right' : 'md:pl-12 lg:md:pl-16'}`}>
-                      <div className="bg-white p-8 rounded-[24px] shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-50 hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all duration-300">
+                      <div className="bg-white p-8 rounded-[24px] border border-gray-50 transition-all duration-300">
                         {item.period && (
                           <span className="inline-block px-3 py-1 bg-[#39A46B]/10 text-[#39A46B] rounded-lg text-[13px] font-bold mb-3">
                             {item.period}
@@ -68,6 +69,7 @@ const TimelineSection: React.FC<TimelineSectionProps> = ({
                 </ScrollReveal>
               );
             })}
+          </div>
           </div>
         </div>
       </div>

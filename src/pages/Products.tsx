@@ -25,7 +25,7 @@ const Products = () => {
       <HeroSection 
         headline={"From Seed to Solution.\nFrom Test to Treatment."}
         subHeadline={"Oncetra's product and service pipeline addresses cancer at every stage. We are building each part of this pipeline with the same rigour and the same commitment to affordability and access."}
-        bgImage="/home/banner.png"
+        bgImage="/images/heroes/products.png"
         showRightContent={false}
       />
 

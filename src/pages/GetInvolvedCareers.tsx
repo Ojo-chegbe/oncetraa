@@ -10,7 +10,7 @@ const GetInvolvedCareers = () => {
       <HeroSection 
         headline={"Build a Career at the Intersection of Science and Purpose."}
         subHeadline={"Oncetra is deliberately creating a career ecosystem — opening doors for Africa's next generation of plant scientists, oncology researchers, public health advocates, pharmacists, and healthcare entrepreneurs."}
-        bgImage="/home/nature_science.png"
+        bgImage="/images/heroes/careers.png"
         showRightContent={false}
       />
 
@@ -45,7 +45,7 @@ const GetInvolvedCareers = () => {
           <p className="mb-6">
             We offer mentorship conversations with our founding team and affiliated researchers — no formal program yet, just honest and generative conversations about building a career with purpose.
           </p>
-          <Button to="/contact" variant="outline">
+          <Button to="/contact" variant="secondary">
             Request a Mentorship Conversation
           </Button>
         </SplitSection>
