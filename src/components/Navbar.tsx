@@ -31,8 +31,8 @@ const Navbar = () => {
               </button>
               <div className="absolute hidden group-hover:block top-full left-0 pt-2 z-10 w-48">
                 <div className="flex flex-col bg-white shadow-xl py-3 rounded-xl border border-gray-100 w-full">
-                  <Link to="/about/story" className="px-5 py-2.5 text-[15px] text-[#222222] hover:bg-gray-50 hover:text-[#39A46B] font-medium">Our Story</Link>
-                  <Link to="/about/leadership" className="px-5 py-2.5 text-[15px] text-[#222222] hover:bg-gray-50 hover:text-[#39A46B] font-medium">Leadership</Link>
+                  <Link to="/about#story" className="px-5 py-2.5 text-[15px] text-[#222222] hover:bg-gray-50 hover:text-[#39A46B] font-medium">Our Story</Link>
+                  <Link to="/about#leadership" className="px-5 py-2.5 text-[15px] text-[#222222] hover:bg-gray-50 hover:text-[#39A46B] font-medium">Leadership</Link>
                 </div>
               </div>
             </div>
@@ -138,8 +138,8 @@ const Navbar = () => {
           <div className="flex flex-col gap-4">
             <span className="text-gray-400 text-sm font-semibold uppercase tracking-wider">About Us</span>
             <div className="flex flex-col gap-4">
-              <Link to="/about/story" className="text-[#222222] text-lg font-medium hover:text-[#39A46B]" onClick={toggleMobileMenu}>Our Story</Link>
-              <Link to="/about/leadership" className="text-[#222222] text-lg font-medium hover:text-[#39A46B]" onClick={toggleMobileMenu}>Leadership</Link>
+              <Link to="/about#story" className="text-[#222222] text-lg font-medium hover:text-[#39A46B]" onClick={toggleMobileMenu}>Our Story</Link>
+              <Link to="/about#leadership" className="text-[#222222] text-lg font-medium hover:text-[#39A46B]" onClick={toggleMobileMenu}>Leadership</Link>
             </div>
           </div>
 

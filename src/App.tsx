@@ -3,8 +3,7 @@ import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 
 import Layout from './components/Layout';
 import Home from './pages/Home';
-import AboutStory from './pages/AboutStory';
-import AboutLeadership from './pages/AboutLeadership';
+import About from './pages/About';
 import Approach from './pages/Approach';
 import Products from './pages/Products';
 import ResourcesAwareness from './pages/ResourcesAwareness';
@@ -35,8 +34,7 @@ function App() {
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
             
-            <Route path="about/story" element={<AboutStory />} />
-            <Route path="about/leadership" element={<AboutLeadership />} />
+            <Route path="about" element={<About />} />
             
             <Route path="approach" element={<Approach />} />
             

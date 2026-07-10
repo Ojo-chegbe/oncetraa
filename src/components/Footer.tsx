@@ -42,7 +42,7 @@ const Footer = () => {
                 <span className="text-[#39A46B] text-lg font-medium">Company</span>
                 <div className="flex flex-col items-start gap-5">
                     <Link to="/" className="text-white font-medium text-[17px] hover:text-[#39A46B] transition-colors">Home</Link>
-                    <Link to="/about/story" className="text-white font-medium text-[17px] hover:text-[#39A46B] transition-colors">About</Link>
+                    <Link to="/about" className="text-white font-medium text-[17px] hover:text-[#39A46B] transition-colors">About</Link>
                     <Link to="/approach" className="text-white font-medium text-[17px] hover:text-[#39A46B] transition-colors">Approach</Link>
                     <Link to="/products" className="text-white font-medium text-[17px] hover:text-[#39A46B] transition-colors">Products</Link>
                 </div>
