@@ -1,4 +1,5 @@
 import React from 'react';
+import SEO from '../components/SEO';
 import HeroSection from '../components/HeroSection';
 import SplitSection from '../components/SplitSection';
 import ScrollReveal from '../components/ScrollReveal';
@@ -22,6 +23,10 @@ const StatusBadge = ({ status, type }: { status: string, type: 'active' | 'devel
 const Products = () => {
   return (
     <>
+      <SEO 
+        title="Oncetra Products | Soursop, Diagnostics & Cancer Care Pipeline"
+        description="Explore Oncetra's product pipeline including our flagship soursop range, medicinal plant portfolio, and cancer diagnostic access programs."
+      />
       <HeroSection 
         headline={"From Seed to Solution.\nFrom Test to Treatment."}
         subHeadline={"Oncetra's product and service pipeline addresses cancer at every stage. We are building each part of this pipeline with the same rigour and the same commitment to affordability and access."}

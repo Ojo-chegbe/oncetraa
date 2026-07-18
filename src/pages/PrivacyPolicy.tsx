@@ -1,9 +1,14 @@
 import React from 'react';
+import SEO from '../components/SEO';
 import TextSection from '../components/TextSection';
 
 const PrivacyPolicy = () => {
   return (
-    <>
+    <div className="pt-24 pb-12">
+      <SEO 
+        title="Privacy Policy | Oncetra"
+        description="Oncetra's privacy policy regarding data collection and usage."
+      />
       <TextSection 
         headline="Privacy Policy"
         bgWhite={true}
@@ -18,7 +23,7 @@ const PrivacyPolicy = () => {
           A full privacy policy is available on request.
         </p>
       </TextSection>
-    </>
+    </div>
   );
 };
 

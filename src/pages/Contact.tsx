@@ -1,4 +1,5 @@
 import React from 'react';
+import SEO from '../components/SEO';
 import HeroSection from '../components/HeroSection';
 import ScrollReveal from '../components/ScrollReveal';
 import Button from '../components/Button';
@@ -6,6 +7,15 @@ import Button from '../components/Button';
 const Contact = () => {
   return (
     <>
+      <SEO 
+        title="Contact Oncetra | Partnerships, Press & General Enquiries"
+        description="Get in touch with Oncetra for general enquiries, partnerships, and press opportunities."
+        schema={{
+          "@context": "https://schema.org",
+          "@type": "ContactPage",
+          "name": "Contact Oncetra"
+        }}
+      />
       <HeroSection 
         headline={"Let's Build the Future of Cancer Care Together."}
         subHeadline={"Whether you are looking to partner with us, cover our story in the press, or ask a question about our work, our team is ready to connect."}
@@ -77,9 +87,9 @@ const Contact = () => {
                   </div>
                   
                   <div className="pt-4 flex justify-center">
-                    <Button to="#" variant="primary">
+                    <button type="submit" onClick={(e) => e.preventDefault()} className="inline-flex items-center justify-center px-8 py-4 text-[16px] font-bold text-white bg-[#39A46B] rounded-full hover:bg-[#122922] transition-colors duration-300">
                         Send Message
-                    </Button>
+                    </button>
                   </div>
               </form>
           </div>

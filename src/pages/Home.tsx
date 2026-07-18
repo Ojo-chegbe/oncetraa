@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
 import HeroSection from '../components/HeroSection';
 import SplitSection from '../components/SplitSection';
 import GridSection from '../components/GridSection';
@@ -11,6 +12,17 @@ import CarouselSection from '../components/CarouselSection';
 const Home = () => {
   return (
     <>
+      <SEO 
+        title="Oncetra | Cancer Awareness, Prevention & Research in Africa"
+        description="Oncetra is building Africa's most comprehensive cancer care ecosystem — rooted in nature, powered by science, and committed to every community."
+        schema={{
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "Oncetra",
+          "url": "https://oncetra.com",
+          "logo": "https://oncetra.com/logo.png"
+        }}
+      />
       <HeroSection 
         headline={
           <>
@@ -19,7 +31,7 @@ const Home = () => {
         }
         subHeadline={"Oncetra is building Africa's most comprehensive cancer care ecosystem — rooted in nature, powered by science, and committed to every community."}
         button1Text="Explore Our Approach"
-        button1Link="/approach/overview"
+        button1Link="/approach"
         button2Text="Join the Movement"
         button2Link="/get-involved/partner"
       />
@@ -54,42 +66,42 @@ const Home = () => {
               description: "Every product and intervention is developed alongside the science. We work with doctors, researchers, and institutions to make sure what we offer holds up to scrutiny.",
               imageSrc: "/home/research.png",
               buttonText: "Learn More",
-              buttonLink: "/approach/overview"
+              buttonLink: "/approach"
             },
             {
               title: "Education and Awareness",
               description: "Educating people before cancer develops, equipping communities with the knowledge and the natural tools to reduce their risk.",
               imageSrc: "/home/community.png",
               buttonText: "Learn More",
-              buttonLink: "/approach/overview"
+              buttonLink: "/approach"
             },
             {
               title: "Cultivation of Medicinal Plants",
               description: "Mass cultivation of medicinal plants like Annona muricata to build the supply chain for Africa's first science-aligned therapeutic product line.",
               imageSrc: "/home/nature_science.png",
               buttonText: "Learn More",
-              buttonLink: "/approach/overview"
+              buttonLink: "/approach"
             },
             {
               title: "Prevention",
               description: "We harness the science-backed power of medicinal plants — led by soursop (Annona muricata) — alongside public education campaigns to stop cancer before it starts.",
               imageSrc: "/home/prevention.png",
               buttonText: "Learn More",
-              buttonLink: "/approach/prevention"
+              buttonLink: "/approach#prevention"
             },
             {
               title: "Early Diagnosis",
               description: "We partner with diagnostic laboratories to bring affordable cancer screening — PAP smears, PSA tests, and HPV vaccination programs — to underserved communities.",
               imageSrc: "/home/diagnosis.png",
               buttonText: "Learn More",
-              buttonLink: "/approach/early-diagnosis"
+              buttonLink: "/approach#diagnosis"
             },
             {
               title: "Treatment Optimization",
               description: "We are building a dedicated cancer pharmacy and a data-driven patient care model that matches individuals to the right treatments at the right time.",
               imageSrc: "/home/treatment.png",
               buttonText: "Learn More",
-              buttonLink: "/approach/treatment-optimization"
+              buttonLink: "/approach#treatment"
             }
           ]}
         />
@@ -264,8 +276,8 @@ const Home = () => {
                   <Button to="/get-involved/partner" variant="primary">
                     Partner With Us
                   </Button>
-                  <Button href="#newsletter" variant="tertiary">
-                    Join Newsletter
+                  <Button to="/contact" variant="tertiary">
+                    Contact Us
                   </Button>
                 </div>
               </div>

@@ -1,4 +1,5 @@
 import React from 'react';
+import SEO from '../components/SEO';
 import HeroSection from '../components/HeroSection';
 import SplitSection from '../components/SplitSection';
 import ScrollReveal from '../components/ScrollReveal';
@@ -7,6 +8,10 @@ import Button from '../components/Button';
 const GetInvolvedCommunity = () => {
   return (
     <>
+      <SEO 
+        title="Community Programs | Cancer Education by Oncetra"
+        description="Bring cancer education directly to your community with Oncetra. We host local programs on risk awareness, prevention, and early screening navigation."
+      />
       <HeroSection 
         headline={"Cancer Awareness Belongs in Every Community."}
         subHeadline={"Oncetra's community programs bring cancer education directly to the people who need it — in local languages, through trusted community voices, and in spaces that feel familiar rather than clinical."}

@@ -1,4 +1,5 @@
 import React from 'react';
+import SEO from '../components/SEO';
 import HeroSection from '../components/HeroSection';
 import SplitSection from '../components/SplitSection';
 import ScrollReveal from '../components/ScrollReveal';
@@ -7,6 +8,10 @@ import Button from '../components/Button';
 const GetInvolvedVolunteer = () => {
   return (
     <>
+      <SEO 
+        title="Volunteer With Oncetra | Cancer Awareness & Community Support"
+        description="Give your time to something that matters. Volunteer with Oncetra to support cancer awareness drives, translation, and community health events."
+      />
       <HeroSection 
         headline={"Give Your Time to Something That Matters."}
         subHeadline={"Oncetra's work happens in communities — in fields where medicinal plants are grown, in clinics where screenings happen, in schools and meeting halls where awareness is built. Volunteers are the heartbeat of this effort."}
@@ -79,9 +84,9 @@ const GetInvolvedVolunteer = () => {
                   </div>
                   
                   <div className="pt-4 flex justify-center">
-                    <Button to="#" variant="primary">
+                    <button type="submit" onClick={(e) => e.preventDefault()} className="inline-flex items-center justify-center px-8 py-4 text-[16px] font-bold text-white bg-[#39A46B] rounded-full hover:bg-[#122922] transition-colors duration-300">
                       Submit Application
-                    </Button>
+                    </button>
                   </div>
               </form>
           </div>

@@ -1,4 +1,5 @@
 import React from 'react';
+import SEO from '../components/SEO';
 import TextSection from '../components/TextSection';
 import GridSection from '../components/GridSection';
 import HeroSection from '../components/HeroSection';
@@ -8,6 +9,19 @@ import ScrollReveal from '../components/ScrollReveal';
 const ResourcesScience = () => {
   return (
     <>
+      <SEO 
+        title="Plant Medicine & Cancer Research | Oncetra Science"
+        description="Explore the science behind plant-based interventions for cancer care, including research on Soursop, Ginger, and Garlic."
+        schema={{
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": "Plant Medicine & Cancer Research",
+          "publisher": {
+            "@type": "Organization",
+            "name": "Oncetra"
+          }
+        }}
+      />
       <ScrollReveal>
         <HeroSection 
           headline="What Does the Science Actually Say?"

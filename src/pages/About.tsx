@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+import SEO from '../components/SEO';
 import HeroSection from '../components/HeroSection';
 import ScrollReveal from '../components/ScrollReveal';
 
@@ -20,6 +21,10 @@ const About = () => {
 
   return (
     <>
+      <SEO 
+        title="About Oncetra | Cancer Research, Awareness & Health Equity in Africa"
+        description="Learn about Oncetra's multidisciplinary team of doctors, pharmacists, and advocates building Africa's integrated cancer intelligence company."
+      />
       <HeroSection 
         headline={<>From Registration<br />To <span className="text-[#39A46B] italic">Transformation.</span></>}
         subHeadline={"Oncetra is a phased, actionable blueprint to build Nigeria's definitive cancer research, consultancy, and sensitization ecosystem over the next two decades."}

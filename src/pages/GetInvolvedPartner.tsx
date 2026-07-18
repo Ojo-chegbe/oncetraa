@@ -1,4 +1,5 @@
 import React from 'react';
+import SEO from '../components/SEO';
 import HeroSection from '../components/HeroSection';
 import CarouselSection from '../components/CarouselSection';
 import ScrollReveal from '../components/ScrollReveal';
@@ -7,6 +8,10 @@ import Button from '../components/Button';
 const GetInvolvedPartner = () => {
   return (
     <>
+      <SEO 
+        title="Partner With Oncetra | Cancer Research & Clinical Collaboration"
+        description="Join Oncetra's coalition of research, clinical, and agricultural partners to scale cancer care solutions across Africa."
+      />
       <HeroSection 
         headline={"Your Organisation Can Help Change Cancer Outcomes."}
         subHeadline={"Oncetra is building a broad coalition of partners across research, clinical care, agriculture, and business. We welcome partnerships at every level to scale our impact across Africa."}
@@ -92,9 +97,9 @@ const GetInvolvedPartner = () => {
                   </div>
                   
                   <div className="pt-4 flex justify-center">
-                    <Button to="#" variant="primary">
+                    <button type="submit" onClick={(e) => e.preventDefault()} className="inline-flex items-center justify-center px-8 py-4 text-[16px] font-bold text-white bg-[#39A46B] rounded-full hover:bg-[#122922] transition-colors duration-300">
                       Send Enquiry
-                    </Button>
+                    </button>
                   </div>
               </form>
           </div>

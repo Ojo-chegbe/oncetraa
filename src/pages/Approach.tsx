@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+import SEO from '../components/SEO';
 import HeroSection from '../components/HeroSection';
 import TextSection from '../components/TextSection';
 import SplitSection from '../components/SplitSection';
@@ -25,6 +26,10 @@ const Approach = () => {
 
   return (
     <>
+      <SEO 
+        title="Our Approach | Cancer Prevention, Early Diagnosis & Treatment Access"
+        description="Oncetra's multi-layered approach to cancer care in Africa focuses on prevention, early diagnosis, and optimizing treatment access."
+      />
       <HeroSection 
         headline={"We Do Not Treat Cancer \nas a Single Problem."}
         subHeadline={"Cancer is not one disease. It is not one challenge. It cannot be solved with one intervention. Oncetra's approach is deliberately multi-layered, addressing cancer across the full arc of the human experience."}

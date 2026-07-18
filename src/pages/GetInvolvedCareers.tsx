@@ -1,4 +1,5 @@
 import React from 'react';
+import SEO from '../components/SEO';
 import HeroSection from '../components/HeroSection';
 import SplitSection from '../components/SplitSection';
 import ScrollReveal from '../components/ScrollReveal';
@@ -7,6 +8,10 @@ import Button from '../components/Button';
 const GetInvolvedCareers = () => {
   return (
     <>
+      <SEO 
+        title="Careers | Work at Oncetra"
+        description="Build a career at the intersection of science and purpose. Join Oncetra's team of plant scientists, oncology researchers, and public health advocates."
+      />
       <HeroSection 
         headline={"Build a Career at the Intersection of Science and Purpose."}
         subHeadline={"Oncetra is deliberately creating a career ecosystem — opening doors for Africa's next generation of plant scientists, oncology researchers, public health advocates, pharmacists, and healthcare entrepreneurs."}

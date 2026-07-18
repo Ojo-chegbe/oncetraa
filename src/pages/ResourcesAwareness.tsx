@@ -1,4 +1,5 @@
 import React from 'react';
+import SEO from '../components/SEO';
 import TextSection from '../components/TextSection';
 import GridSection from '../components/GridSection';
 import HeroSection from '../components/HeroSection';
@@ -8,6 +9,19 @@ import ScrollReveal from '../components/ScrollReveal';
 const ResourcesAwareness = () => {
   return (
     <>
+      <SEO 
+        title="Cancer Awareness & Education | Oncetra Resources"
+        description="Learn about cancer prevention, risk factors, and early detection in Africa with Oncetra's evidence-based awareness resources."
+        schema={{
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": "Cancer Awareness & Education",
+          "publisher": {
+            "@type": "Organization",
+            "name": "Oncetra"
+          }
+        }}
+      />
       <ScrollReveal>
         <HeroSection 
           headline="Understanding Cancer Is the First Step to Defeating It."
