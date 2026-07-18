@@ -21,7 +21,6 @@ const Navbar = () => {
           {/* Desktop Menu */}
           <div className="hidden lg:flex items-center gap-6 xl:gap-8">
             <Link to="/" className="text-[#222222] text-[15px] font-medium hover:text-[#39A46B] py-2">Home</Link>
-            <Link to="/models" className="text-[#222222] text-[15px] font-medium hover:text-[#39A46B] py-2">Models</Link>
             
             <div className="relative group">
               <button className="text-[#222222] text-[15px] font-medium hover:text-[#39A46B] py-2 flex items-center gap-1">
@@ -135,7 +134,6 @@ const Navbar = () => {
         {/* Mobile Menu Links */}
         <div className="flex flex-col p-8 gap-8">
           <Link to="/" className="text-[#222222] text-xl font-bold hover:text-[#39A46B]" onClick={toggleMobileMenu}>Home</Link>
-          <Link to="/models" className="text-[#222222] text-xl font-bold hover:text-[#39A46B]" onClick={toggleMobileMenu}>Models</Link>
           
           <div className="flex flex-col gap-4">
             <span className="text-gray-400 text-sm font-semibold uppercase tracking-wider">About Us</span>
