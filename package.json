@@ -7,9 +7,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "react-helmet-async": "^3.0.0",
+    "react-hot-toast": "^2.6.0",
     "react-icons": "^4.11.0",
     "react-router-dom": "^6.21.1"
   },

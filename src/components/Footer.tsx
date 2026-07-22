@@ -1,7 +1,43 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import toast from 'react-hot-toast';
+import SuccessModal from './SuccessModal';
 
 const Footer = () => {
+  const [isSending, setIsSending] = useState(false);
+  const [showSuccess, setShowSuccess] = useState(false);
+
+  const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    if (isSending) return;
+    setIsSending(true);
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+
+    formData.append("access_key", import.meta.env.VITE_WEB3FORMS_ACCESS_KEY);
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setShowSuccess(true);
+        form.reset();
+      } else {
+        console.log("Error", data);
+        toast.error(data.message || "An error occurred");
+      }
+    } catch (error) {
+      console.error(error);
+      toast.error("Failed to subscribe");
+    } finally {
+      setIsSending(false);
+    }
+  };
   return (
     <div className="flex justify-center self-stretch bg-[#122922] pt-16 md:pt-[120px] pb-[29px] px-6 md:px-12 lg:px-[120px]">
       <div className="flex flex-col w-full max-w-[1400px] gap-8">
@@ -21,18 +57,22 @@ const Footer = () => {
               {"Get stories, updates, and real impact reports delivered to your inbox."}
             </p>
             
-            <div className="flex items-center p-2 rounded-full border border-white/10 bg-[#122922] w-full max-w-md mt-4 relative">
-              <input 
-                type="email" 
-                placeholder="Your Email Address" 
-                className="bg-transparent border-none outline-none text-white text-base px-6 py-2 w-full placeholder:text-white/40" 
-              />
-              <button className="flex items-center justify-center shrink-0 w-12 h-12 bg-[#39A46B] text-white rounded-full hover:bg-[#2d8555] transition-colors ml-2">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M5 12h14M12 5l7 7-7 7"/>
-                </svg>
-              </button>
-            </div>
+            <form onSubmit={onSubmit} className="w-full max-w-md mt-4 flex flex-col gap-2 relative">
+              <div className="flex items-center p-2 rounded-full border border-white/10 bg-[#122922] w-full">
+                <input 
+                  type="email" 
+                  name="email"
+                  required
+                  placeholder="Your Email Address" 
+                  className="bg-transparent border-none outline-none text-white text-base px-6 py-2 w-full placeholder:text-white/40" 
+                />
+                <button type="submit" disabled={isSending} className="flex items-center justify-center shrink-0 w-12 h-12 bg-[#39A46B] text-white rounded-full hover:bg-[#2d8555] transition-colors ml-2 disabled:opacity-50">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                  </svg>
+                </button>
+              </div>
+            </form>
           </div>
 
           {/* Top Right: Links */}
@@ -77,7 +117,7 @@ const Footer = () => {
                         <svg className="w-6 h-6 text-[#39A46B] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
                         </svg>
-                        <a href="mailto:contact@oncetra.com" className="text-white font-medium text-[17px] hover:text-[#39A46B] transition-colors">contact@oncetra.com</a>
+                        <a href="mailto:hello@oncetra.org" className="text-white font-medium text-[17px] hover:text-[#39A46B] transition-colors">hello@oncetra.org</a>
                     </div>
                 </div>
             </div>
@@ -153,8 +193,14 @@ const Footer = () => {
                 Made with purpose.
             </span>
         </div>
-
       </div>
+
+      <SuccessModal 
+        isOpen={showSuccess} 
+        onClose={() => setShowSuccess(false)} 
+        title="Subscribed!"
+        message="Thank you for subscribing to the Oncetra newsletter. You're now on the list to receive our latest updates and impact reports." 
+      />
     </div>
   );
 };

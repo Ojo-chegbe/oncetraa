@@ -28,10 +28,13 @@ function ScrollToTop() {
   return null;
 }
 
+import { Toaster } from 'react-hot-toast';
+
 function App() {
   return (
     <HelmetProvider>
       <BrowserRouter>
+        <Toaster position="top-center" />
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<Layout />}>
