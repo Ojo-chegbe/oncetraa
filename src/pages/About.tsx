@@ -124,9 +124,9 @@ const About = () => {
             {/* Team Grid */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
               {[
-                { name: "Makwin Luther Luka", qualifications: "B.Pharm, MSc", role: "Team Lead", linkedin: "https://linkedin.com" },
-                { name: "Luimommei Kpasham", qualifications: "DVM, MSc", role: "Research Lead", linkedin: "https://linkedin.com" },
-                { name: "Ogwu Ojochegbe", qualifications: "", role: "Communications Lead", linkedin: "https://linkedin.com" }
+                { name: "Makwin Luther Luka", qualifications: "B.Pharm, MSc", role: "Team Lead", linkedin: "https://www.linkedin.com/in/makwin-luther-045206167/" },
+                { name: "Luimommei Kpasham", qualifications: "DVM, MSc", role: "Research Lead", linkedin: "https://www.linkedin.com/in/kpasham-luimommei-zethan-a33b5425a/" },
+                { name: "Ogwu Ojochegbe", qualifications: "", role: "Communications Lead", linkedin: "https://www.linkedin.com/in/ojochegbe/" }
               ].map((member, idx) => (
                 <ScrollReveal key={idx} delay={idx * 100}>
                   <div className="bg-white p-8 md:p-10 rounded-[24px] border border-[#0000000A] shadow-[0_8px_30px_rgb(0,0,0,0.02)] transition-all duration-300 hover:shadow-[0_8px_30px_rgb(0,0,0,0.06)] group h-full flex flex-col relative overflow-hidden">
