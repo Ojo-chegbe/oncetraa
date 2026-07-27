@@ -15,14 +15,14 @@ const GetInvolvedCommunity = () => {
       <HeroSection 
         headline={"Cancer Awareness Belongs in Every Community."}
         subHeadline={"Oncetra's community programs bring cancer education directly to the people who need it — in local languages, through trusted community voices, and in spaces that feel familiar rather than clinical."}
-        bgImage="/images/heroes/community.png"
+        bgImage="/images/heroes/community.webp"
         showRightContent={false}
       />
 
       <ScrollReveal>
         <SplitSection
           headline="What We Teach"
-          imageSrc="/home/problem.png"
+          imageSrc="/home/problem.webp"
           bgWhite={true}
         >
           <p>
@@ -41,7 +41,7 @@ const GetInvolvedCommunity = () => {
         <SplitSection
           headline="Host a Program"
           imageOnRight={true}
-          imageSrc="/home/partner_clinical.png"
+          imageSrc="/home/partner_clinical.webp"
           bgWhite={false}
         >
           <p>

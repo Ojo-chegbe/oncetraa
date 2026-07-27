@@ -6,21 +6,21 @@ const carouselData = [
     number: "1,195+",
     title: "Education Support",
     subtitle: "For Families and individuals.",
-    image: "/home/education_support.png"
+    image: "/impact/education_support.webp"
   },
   {
     id: 1,
     number: "1,000+",
     title: "Prevention",
     subtitle: "Building a natural supply chain.",
-    image: "/home/first_step.png"
+    image: "/home/first_step.webp"
   },
   {
     id: 2,
     number: "5,000+",
     title: "Early Diagnosis",
     subtitle: "Accessible care for all.",
-    image: "/home/treatment.png"
+    image: "/home/treatment.webp"
   }
 ];
 

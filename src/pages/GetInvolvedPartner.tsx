@@ -51,7 +51,7 @@ const GetInvolvedPartner = () => {
       <HeroSection 
         headline={"Your Organisation Can Help Change Cancer Outcomes."}
         subHeadline={"Oncetra is building a broad coalition of partners across research, clinical care, agriculture, and business. We welcome partnerships at every level to scale our impact across Africa."}
-        bgImage="/images/heroes/partner.png"
+        bgImage="/images/heroes/partner.webp"
         showRightContent={false}
       />
 
@@ -64,22 +64,22 @@ const GetInvolvedPartner = () => {
               {
                 title: "Research Partnerships",
                 description: "For universities and independent research institutions. Co-investigate the clinical potential of our plant portfolio, design community-level prevention studies, and contribute to peer-reviewed literature.",
-                imageSrc: "/home/partner_eu.png"
+                imageSrc: "/home/partner_eu.webp"
               },
               {
                 title: "Clinical Partnerships",
                 description: "For hospitals, specialist oncology centres, and diagnostic laboratories. Join our screening network, refer patients to Oncetra resources, and participate in treatment optimization programs.",
-                imageSrc: "/home/partner_clinical.png"
+                imageSrc: "/home/partner_clinical.webp"
               },
               {
                 title: "Agricultural Partnerships",
                 description: "For landowners and cooperatives. Help us scale the cultivation of soursop and medicinal plants. We provide agronomic guidance and guaranteed offtake. You provide land and local knowledge.",
-                imageSrc: "/home/first_step.png"
+                imageSrc: "/home/first_step.webp"
               },
               {
                 title: "Corporate Philanthropy",
                 description: "For businesses and foundations. Make a measurable contribution to health equity by sponsoring awareness campaigns, funding mobile screening, or supporting youth career development.",
-                imageSrc: "/home/treatment.png"
+                imageSrc: "/home/treatment.webp"
               }
             ]}
           />

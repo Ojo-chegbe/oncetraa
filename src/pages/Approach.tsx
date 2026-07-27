@@ -33,7 +33,7 @@ const Approach = () => {
       <HeroSection 
         headline={"We Do Not Treat Cancer \nas a Single Problem."}
         subHeadline={"Cancer is not one disease. It is not one challenge. It cannot be solved with one intervention. Oncetra's approach is deliberately multi-layered, addressing cancer across the full arc of the human experience."}
-        bgImage="/home/banner.png"
+        bgImage="/home/banner.webp"
         showRightContent={false}
       />
 
@@ -76,7 +76,7 @@ const Approach = () => {
         <ScrollReveal>
           <SplitSection
             headline="Pillar 1: Prevention"
-            imageSrc="/home/problem.png"
+            imageSrc="/home/problem.webp"
             bgWhite={true}
           >
             <h3 className="text-[#222222] text-xl font-bold mb-2">Stop Cancer Before It Starts.</h3>
@@ -98,12 +98,12 @@ const Approach = () => {
               {
                 title: "Soursop (Annona muricata)",
                 description: "Contains acetogenins that have demonstrated selective cytotoxic activity against cancer cell lines in laboratory studies.",
-                imageSrc: "/home/first_step.png"
+                imageSrc: "/home/first_step.webp"
               },
               {
                 title: "Ginger (Zingiber officinale)",
                 description: "Contains gingerols and shogaols, compounds that have demonstrated anti-inflammatory and antioxidant properties.",
-                imageSrc: "/home/nature_science.png"
+                imageSrc: "/home/nature_science.webp"
               },
               {
                 title: "Garlic (Allium sativum)",
@@ -124,7 +124,7 @@ const Approach = () => {
           <SplitSection
             headline="Pillar 2: Early Diagnosis"
             imageOnRight={true}
-            imageSrc="/home/partner_clinical.png"
+            imageSrc="/home/partner_clinical.webp"
             bgWhite={true}
           >
             <h3 className="text-[#222222] text-xl font-bold mb-2">Caught Early. Treated Successfully.</h3>
@@ -148,7 +148,7 @@ const Approach = () => {
         <ScrollReveal>
           <SplitSection
             headline="Pillar 3: Treatment Optimization"
-            imageSrc="/home/treatment.png"
+            imageSrc="/home/treatment.webp"
             bgWhite={false}
           >
             <h3 className="text-[#222222] text-xl font-bold mb-2">The Right Treatment. At the Right Time.</h3>

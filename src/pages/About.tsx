@@ -28,7 +28,7 @@ const About = () => {
       <HeroSection 
         headline={<>From Registration<br />To <span className="text-[#39A46B] italic">Transformation.</span></>}
         subHeadline={"Oncetra is a phased, actionable blueprint to build Nigeria's definitive cancer research, consultancy, and sensitization ecosystem over the next two decades."}
-        bgImage="/images/heroes/story.png"
+        bgImage="/images/heroes/story.webp"
         showRightContent={false}
       />
 

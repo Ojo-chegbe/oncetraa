@@ -26,7 +26,7 @@ const ResourcesScience = () => {
         <HeroSection 
           headline="What Does the Science Actually Say?"
           subHeadline="At Oncetra, we believe in the potential of plant-based medicine — and we believe in telling the truth about where the evidence is strong, where it is promising but preliminary, and where it is still unclear."
-          bgImage="/images/heroes/science.png"
+          bgImage="/images/heroes/science.webp"
           showRightContent={false}
         />
       </ScrollReveal>
@@ -34,7 +34,7 @@ const ResourcesScience = () => {
       <ScrollReveal>
         <SplitSection 
           headline="Our Approach to Evidence"
-          imageSrc="/resources/science_evidence.png"
+          imageSrc="/resources/science_evidence.webp"
           imageOnRight={true}
           bgWhite={false}
         >
@@ -68,25 +68,25 @@ const ResourcesScience = () => {
             {
               title: "Soursop — Annona muricata",
               description: "What the research shows: Soursop leaves and seeds contain compounds called annonaceous acetogenins. These have shown selective cytotoxic activity in laboratory studies against breast, lung, colon, and prostate cancer cell lines.\n\nWhat the research does not yet show: No large-scale human clinical trials have confirmed these effects in people. Oncetra does not claim soursop cures or treats cancer.\n\nOur position: The evidence is promising and the biological mechanism is scientifically interesting. We believe in investing in this research, not overselling it.",
-              imageSrc: "/resources/soursop_botanical.png",
+              imageSrc: "/resources/soursop_botanical.webp",
               category: "Promising but Preliminary"
             },
             {
               title: "Ginger — Zingiber officinale",
               description: "Gingerols and shogaols, the active compounds in ginger, have demonstrated anti-inflammatory and antioxidant activity in multiple studies. Research has also explored their potential to reduce nausea in chemotherapy patients — an application with reasonably strong clinical evidence. Studies into ginger's direct anticancer properties are at the promising-but-preliminary stage.",
-              imageSrc: "/resources/ginger_botanical.png",
+              imageSrc: "/resources/ginger_botanical.webp",
               category: "Established Evidence"
             },
             {
               title: "Garlic — Allium sativum",
               description: "Epidemiological studies have associated higher garlic consumption with reduced incidence of gastric and colorectal cancers. Laboratory studies have explored allicin's antiproliferative effects on cancer cells. The findings are encouraging and the research is ongoing. Clinical confirmation in humans remains limited.",
-              imageSrc: "/resources/garlic_botanical.png",
+              imageSrc: "/resources/garlic_botanical.webp",
               category: "Emerging"
             },
             {
               title: "Cashew — Anacardium occidentale",
               description: "Anacardic acid from cashew has shown antiproliferative effects against certain cancer cell lines in laboratory studies. This is early-stage research. We include cashew in our future pipeline because the initial findings are scientifically interesting and because it is a plant deeply familiar to African communities.",
-              imageSrc: "/resources/cashew_botanical.png",
+              imageSrc: "/resources/cashew_botanical.webp",
               category: "Emerging"
             }
           ]}

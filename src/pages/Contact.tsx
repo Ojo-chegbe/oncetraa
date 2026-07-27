@@ -55,7 +55,7 @@ const Contact = () => {
       <HeroSection 
         headline={"Let's Build the Future of Cancer Care Together."}
         subHeadline={"Whether you are looking to partner with us, cover our story in the press, or ask a question about our work, our team is ready to connect."}
-        bgImage="/images/heroes/contact.png"
+        bgImage="/images/heroes/contact.webp"
         showRightContent={false}
       />
 

@@ -26,7 +26,7 @@ const ResourcesAwareness = () => {
         <HeroSection 
           headline="Understanding Cancer Is the First Step to Defeating It."
           subHeadline="Oncetra's Cancer Awareness resource is written for everyone — patients, families, community leaders, and healthcare workers. No jargon. No overstatement. Just honest, evidence-based information."
-          bgImage="/images/heroes/awareness.png"
+          bgImage="/images/heroes/awareness.webp"
           showRightContent={false}
         />
       </ScrollReveal>
@@ -46,7 +46,7 @@ const ResourcesAwareness = () => {
       <ScrollReveal>
         <SplitSection 
           headline="Cancer in Africa — Understanding the Scale"
-          imageSrc="/resources/africa_burden.png"
+          imageSrc="/resources/africa_burden.webp"
           imageOnRight={true}
           bgWhite={true}
         >
@@ -91,7 +91,7 @@ const ResourcesAwareness = () => {
       <ScrollReveal>
         <SplitSection 
           headline="Warning Signs You Should Never Ignore"
-          imageSrc="/home/diagnosis.png"
+          imageSrc="/home/diagnosis.webp"
           imageOnRight={false}
           bgWhite={true}
         >

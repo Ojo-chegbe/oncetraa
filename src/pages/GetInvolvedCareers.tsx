@@ -15,14 +15,14 @@ const GetInvolvedCareers = () => {
       <HeroSection 
         headline={"Build a Career at the Intersection of Science and Purpose."}
         subHeadline={"Oncetra is deliberately creating a career ecosystem — opening doors for Africa's next generation of plant scientists, oncology researchers, public health advocates, pharmacists, and healthcare entrepreneurs."}
-        bgImage="/images/heroes/careers.png"
+        bgImage="/images/heroes/careers.webp"
         showRightContent={false}
       />
 
       <ScrollReveal>
         <SplitSection
           headline="Current Opportunities"
-          imageSrc="/home/problem.png"
+          imageSrc="/home/problem.webp"
           bgWhite={true}
         >
           <p>
@@ -41,7 +41,7 @@ const GetInvolvedCareers = () => {
         <SplitSection
           headline="Mentorship"
           imageOnRight={true}
-          imageSrc="/home/education_support.png"
+          imageSrc="/impact/education_support.webp"
           bgWhite={false}
         >
           <p>

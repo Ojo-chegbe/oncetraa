@@ -30,14 +30,14 @@ const Products = () => {
       <HeroSection 
         headline={"From Seed to Solution.\nFrom Test to Treatment."}
         subHeadline={"Oncetra's product and service pipeline addresses cancer at every stage. We are building each part of this pipeline with the same rigour and the same commitment to affordability and access."}
-        bgImage="/images/heroes/products.png"
+        bgImage="/images/heroes/products.webp"
         showRightContent={false}
       />
 
       <ScrollReveal>
         <SplitSection
           headline="The Soursop Range"
-          imageSrc="/home/first_step.png"
+          imageSrc="/home/first_step.webp"
           bgWhite={true}
         >
           <StatusBadge status="Phase One — In Cultivation" type="cultivation" />
@@ -54,7 +54,7 @@ const Products = () => {
         <SplitSection
           headline="Medicinal Plant Portfolio"
           imageOnRight={true}
-          imageSrc="/home/nature_science.png"
+          imageSrc="/home/nature_science.webp"
           bgWhite={false}
         >
           <StatusBadge status="Phase Two — Expansion Phase" type="expansion" />
@@ -72,7 +72,7 @@ const Products = () => {
       <ScrollReveal>
         <SplitSection
           headline="Diagnostic Access Programs"
-          imageSrc="/home/partner_clinical.png"
+          imageSrc="/home/partner_clinical.webp"
           bgWhite={true}
         >
           <StatusBadge status="Status: Active" type="active" />
@@ -89,7 +89,7 @@ const Products = () => {
         <SplitSection
           headline="The Oncetra Pharmacy"
           imageOnRight={true}
-          imageSrc="/home/treatment.png"
+          imageSrc="/home/treatment.webp"
           bgWhite={false}
         >
           <StatusBadge status="In Development — Expected Year Three" type="development" />

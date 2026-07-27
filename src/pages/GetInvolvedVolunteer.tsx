@@ -51,14 +51,14 @@ const GetInvolvedVolunteer = () => {
       <HeroSection 
         headline={"Give Your Time to Something That Matters."}
         subHeadline={"Oncetra's work happens in communities — in fields where medicinal plants are grown, in clinics where screenings happen, in schools and meeting halls where awareness is built. Volunteers are the heartbeat of this effort."}
-        bgImage="/images/heroes/volunteer.png"
+        bgImage="/images/heroes/volunteer.webp"
         showRightContent={false}
       />
 
       <ScrollReveal>
         <SplitSection
           headline="Where We Need Support"
-          imageSrc="/home/education_support.png"
+          imageSrc="/impact/education_support.webp"
           bgWhite={true}
         >
           <p>

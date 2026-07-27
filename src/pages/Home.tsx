@@ -39,7 +39,7 @@ const Home = () => {
       <ScrollReveal>
         <SplitSection
           headline={"The Problem"}
-        imageSrc="/home/problem.png"
+        imageSrc="/home/problem.webp"
         bgWhite={false}
       >
         <p>
@@ -64,42 +64,42 @@ const Home = () => {
             {
               title: "Research",
               description: "Every product and intervention is developed alongside the science. We work with doctors, researchers, and institutions to make sure what we offer holds up to scrutiny.",
-              imageSrc: "/home/research.png",
+              imageSrc: "/home/research.webp",
               buttonText: "Learn More",
               buttonLink: "/approach"
             },
             {
               title: "Education and Awareness",
               description: "Educating people before cancer develops, equipping communities with the knowledge and the natural tools to reduce their risk.",
-              imageSrc: "/home/community.png",
+              imageSrc: "/home/community.webp",
               buttonText: "Learn More",
               buttonLink: "/approach"
             },
             {
               title: "Cultivation of Medicinal Plants",
               description: "Mass cultivation of medicinal plants like Annona muricata to build the supply chain for Africa's first science-aligned therapeutic product line.",
-              imageSrc: "/home/nature_science.png",
+              imageSrc: "/home/nature_science.webp",
               buttonText: "Learn More",
               buttonLink: "/approach"
             },
             {
               title: "Prevention",
               description: "We harness the science-backed power of medicinal plants — led by soursop (Annona muricata) — alongside public education campaigns to stop cancer before it starts.",
-              imageSrc: "/home/prevention.png",
+              imageSrc: "/home/prevention.webp",
               buttonText: "Learn More",
               buttonLink: "/approach#prevention"
             },
             {
               title: "Early Diagnosis",
               description: "We partner with diagnostic laboratories to bring affordable cancer screening — PAP smears, PSA tests, and HPV vaccination programs — to underserved communities.",
-              imageSrc: "/home/diagnosis.png",
+              imageSrc: "/home/diagnosis.webp",
               buttonText: "Learn More",
               buttonLink: "/approach#diagnosis"
             },
             {
               title: "Treatment Optimization",
               description: "We are building a dedicated cancer pharmacy and a data-driven patient care model that matches individuals to the right treatments at the right time.",
-              imageSrc: "/home/treatment.png",
+              imageSrc: "/home/treatment.webp",
               buttonText: "Learn More",
               buttonLink: "/approach#treatment"
             }
@@ -116,22 +116,22 @@ const Home = () => {
           {
             title: "Nature-First, Science-Backed",
             description: "We do not choose between traditional plant wisdom and evidence-based medicine. We use both. Every plant-based intervention we champion is grounded in published phytochemical and clinical research.",
-            imageSrc: "/home/nature_science.png"
+            imageSrc: "/home/nature_science.webp"
           },
           {
             title: "Built for Africa",
             description: "Our solutions are designed for local realities — climate, culture, cost, and access. We are not importing a model from elsewhere. We are building one here.",
-            imageSrc: "/home/built_for_africa.png"
+            imageSrc: "/home/built_for_africa.webp"
           },
           {
             title: "Research-Oriented",
             description: "Every product and intervention is developed alongside the science. We work with doctors, researchers, and institutions to make sure what we offer holds up to scrutiny.",
-            imageSrc: "/home/research.png"
+            imageSrc: "/home/research.webp"
           },
           {
             title: "Community-Centered",
             description: "From farming to pharmacies, our model creates local employment, empowers young people to pursue careers in health and science, and distributes access to care more equitably.",
-            imageSrc: "/home/community.png"
+            imageSrc: "/home/community.webp"
           }
         ]}
         />
@@ -211,7 +211,7 @@ const Home = () => {
           tagText="Volunteer"
           headline="Drive Research & Awareness"
           subHeadline="Your expertise and voice can save lives. Join our network of researchers and advocates to expand cancer awareness and accelerate science-backed care."
-          imageSrc="/impact/education_support.png"
+          imageSrc="/impact/education_support.webp"
           buttonText="Volunteer with us"
           buttonLink="/get-involved/volunteer"
           items={[
@@ -239,7 +239,7 @@ const Home = () => {
           {/* Background Image & Gradient */}
           <div className="absolute inset-0 z-0">
             <img 
-              src="/home/banner.png" 
+              src="/home/banner.webp" 
               className="w-full h-full object-cover" 
               alt="Banner Background" 
             />
