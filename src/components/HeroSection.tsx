@@ -19,7 +19,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
   subHeadline,
   button1Text,
   button1Link,
-  bgImage = "/hero-bg.png",
+  bgImage = "/hero-bg.webp",
   showRightContent = true
 }) => {
   return (
