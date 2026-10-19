@@ -13,14 +13,19 @@ const ScrollReveal: React.FC<ScrollRevealProps> = ({
   delay = 0,
   direction = 'up'
 }) => {
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
   const domRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    if (!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    // Keep initial content and above-the-fold sections visible without JavaScript.
+    if (!domRef.current || domRef.current.getBoundingClientRect().top < window.innerHeight) return;
+    setIsVisible(false);
+    let timer: ReturnType<typeof setTimeout> | undefined;
     const observer = new IntersectionObserver(
       (entries) => {
         if (entries[0].isIntersecting) {
-          setTimeout(() => {
+          timer = setTimeout(() => {
             setIsVisible(true);
           }, delay);
           if (domRef.current) observer.unobserve(domRef.current);
@@ -30,7 +35,7 @@ const ScrollReveal: React.FC<ScrollRevealProps> = ({
     );
 
     if (domRef.current) observer.observe(domRef.current);
-    return () => observer.disconnect();
+    return () => { observer.disconnect(); clearTimeout(timer); };
   }, [delay]);
 
   const getTransform = () => {

@@ -32,7 +32,7 @@ const AccordionSection: React.FC<AccordionSectionProps> = ({
       <div className="w-full max-w-[1400px] flex flex-col lg:flex-row items-start gap-12 lg:gap-20">
         {/* Left Side: Image */}
         <div className="w-full lg:w-[45%] shrink-0 rounded-[24px] overflow-hidden h-[450px] lg:h-[550px] relative">
-          <img src={imageSrc} alt={headline} className="w-full h-full object-cover" />
+          <img loading="lazy" decoding="async" src={imageSrc} alt={headline} className="w-full h-full object-cover" />
           {/* Subtle gradient overlay at bottom like the image */}
           <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-black/50 to-transparent pointer-events-none"></div>
         </div>

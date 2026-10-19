@@ -1,62 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://oncetra.com/</loc>
+    <loc>https://oncetra.org/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://oncetra.com/about</loc>
+    <loc>https://oncetra.org/about</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://oncetra.com/approach</loc>
+    <loc>https://oncetra.org/approach</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://oncetra.com/products</loc>
+    <loc>https://oncetra.org/products</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://oncetra.com/resources/cancer-awareness</loc>
+    <loc>https://oncetra.org/resources/cancer-awareness</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://oncetra.com/resources/plant-medicine</loc>
+    <loc>https://oncetra.org/resources/plant-medicine</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://oncetra.com/get-involved/partner</loc>
+    <loc>https://oncetra.org/get-involved/partner</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://oncetra.com/get-involved/careers</loc>
+    <loc>https://oncetra.org/get-involved/careers</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://oncetra.com/get-involved/volunteer</loc>
+    <loc>https://oncetra.org/get-involved/volunteer</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://oncetra.com/get-involved/community</loc>
+    <loc>https://oncetra.org/get-involved/community</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://oncetra.com/contact</loc>
+    <loc>https://oncetra.org/contact</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://oncetra.com/privacy-policy</loc>
+    <loc>https://oncetra.org/privacy-policy</loc>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>

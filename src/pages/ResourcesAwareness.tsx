@@ -61,12 +61,12 @@ const ResourcesAwareness = () => {
 
       <ScrollReveal>
         <GridSection 
-          headline="The Five Cancers Most Affecting Africans"
+          headline="Five Cancers Affecting African Communities"
           bgWhite={false}
           cards={[
             {
               title: "Cervical Cancer",
-              description: "The most common cancer among African women and one of the most preventable. Caused by HPV, detectable through PAP smear, and preventable through vaccination. Late diagnosis is the primary reason it remains so deadly.",
+              description: "A major cancer burden in many African countries and one that can often be prevented. Caused by HPV, detectable through PAP smear, and preventable through vaccination. Late diagnosis is the primary reason it remains so deadly.",
             },
             {
               title: "Breast Cancer",
@@ -181,6 +181,9 @@ const ResourcesAwareness = () => {
           </div>
         </TextSection>
       </ScrollReveal>
+      <TextSection headline="Further Reading">
+        <p>For information on prevention, early detection, and treatment, read the <a className="text-[#237344] underline" href="https://www.who.int/news-room/fact-sheets/detail/cancer">World Health Organization cancer fact sheet</a>.</p><p>This resource is for general education. Discuss screening and personal health decisions with a qualified healthcare professional.</p>
+      </TextSection>
     </>
   );
 };

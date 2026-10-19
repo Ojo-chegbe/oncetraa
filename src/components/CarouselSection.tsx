@@ -144,8 +144,8 @@ const CarouselSection: React.FC<CarouselSectionProps> = ({
                     >
                         {card.imageSrc && (
                         <div className="w-full relative mb-6 rounded-[16px] overflow-hidden">
-                            <img
-                              src={card.imageSrc} 
+                            <img loading="lazy" decoding="async"
+                              src={card.imageSrc}
                               className="w-full h-[280px] object-cover"
                               alt={card.title}
                             />

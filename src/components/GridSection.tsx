@@ -51,8 +51,8 @@ const GridSection: React.FC<GridSectionProps> = ({
           <div key={index} className="flex flex-col items-start bg-white p-6 rounded-[24px] border border-[#0000000D]">
             {card.imageSrc && (
               <div className="w-full relative mb-6 rounded-[16px] overflow-hidden">
-                <img
-                  src={card.imageSrc} 
+                <img loading="lazy" decoding="async"
+                  src={card.imageSrc}
                   className="w-full h-[280px] object-cover"
                   alt={card.title}
                 />

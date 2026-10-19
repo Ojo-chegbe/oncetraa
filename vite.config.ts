@@ -3,6 +3,7 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
+  ssr: { noExternal: ['react-icons', 'react-hot-toast'] },
   server: {
     port: 5173,
     strictPort: true,

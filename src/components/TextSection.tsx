@@ -2,6 +2,7 @@ import React from 'react';
 
 interface TextSectionProps {
   headline?: string;
+  headingLevel?: 'h1' | 'h2';
   subHeadline?: string;
   children: React.ReactNode;
   bgWhite?: boolean;
@@ -9,6 +10,7 @@ interface TextSectionProps {
 
 const TextSection: React.FC<TextSectionProps> = ({
   headline,
+  headingLevel: Heading = 'h2',
   subHeadline,
   children,
   bgWhite = true
@@ -20,9 +22,9 @@ const TextSection: React.FC<TextSectionProps> = ({
         {(headline || subHeadline) && (
           <div className="flex flex-col items-start gap-4 mb-4">
             {headline && (
-              <h2 className="text-[#222222] text-4xl font-bold leading-tight" style={{ whiteSpace: 'pre-line' }}>
+              <Heading className="text-[#222222] text-4xl font-bold leading-tight" style={{ whiteSpace: 'pre-line' }}>
                 {headline}
-              </h2>
+              </Heading>
             )}
             {subHeadline && (
               <p className="text-[#727272] text-xl leading-relaxed font-medium" style={{ whiteSpace: 'pre-line' }}>

@@ -5,7 +5,7 @@ import SEO from '../components/SEO';
 const NotFound = () => {
   return (
     <>
-      <SEO 
+      <SEO noindex
         title="Page Not Found | Oncetra"
         description="The page you are looking for does not exist."
       />

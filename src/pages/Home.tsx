@@ -19,8 +19,8 @@ const Home = () => {
           "@context": "https://schema.org",
           "@type": "Organization",
           "name": "Oncetra",
-          "url": "https://oncetra.com",
-          "logo": "https://oncetra.com/logo.png"
+          "url": "https://oncetra.org",
+          "logo": "https://oncetra.org/logo.png"
         }}
       />
       <HeroSection 

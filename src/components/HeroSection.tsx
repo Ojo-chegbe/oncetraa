@@ -29,7 +29,9 @@ const HeroSection: React.FC<HeroSectionProps> = ({
         <img
           src={bgImage} 
           className="w-full h-full object-cover"
-          alt="Hero Background"
+          alt=""
+          fetchPriority="high"
+          loading="eager"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent"></div>
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>

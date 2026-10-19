@@ -13,7 +13,7 @@ const SplitSection: React.FC<SplitSectionProps> = ({
   headline,
   subHeadline,
   imageOnRight = false,
-  imageSrc = "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/qnxOmlfPAZ/ecq88n27_expires_30_days.png",
+  imageSrc = "/home/research.webp",
   children,
   bgWhite = false
 }) => {
@@ -23,7 +23,7 @@ const SplitSection: React.FC<SplitSectionProps> = ({
       
       {!imageOnRight && imageSrc && (
         <div className="flex flex-1 flex-col relative">
-          <img
+          <img loading="lazy" decoding="async"
             src={imageSrc} 
             className="w-full h-full min-h-[300px] lg:min-h-[400px] lg:h-[635px] rounded-3xl object-cover"
             alt={headline}
@@ -53,7 +53,7 @@ const SplitSection: React.FC<SplitSectionProps> = ({
 
       {imageOnRight && imageSrc && (
         <div className="flex flex-1 flex-col relative">
-          <img
+          <img loading="lazy" decoding="async"
             src={imageSrc} 
             className="w-full h-full min-h-[300px] lg:min-h-[400px] lg:h-[635px] rounded-3xl object-cover"
             alt={headline}

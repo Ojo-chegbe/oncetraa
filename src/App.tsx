@@ -30,10 +30,9 @@ function ScrollToTop() {
 
 import { Toaster } from 'react-hot-toast';
 
-function App() {
+export function AppRoutes() {
   return (
-    <HelmetProvider>
-      <BrowserRouter>
+    <>
         <Toaster position="top-center" />
         <ScrollToTop />
         <Routes>
@@ -61,9 +60,10 @@ function App() {
             <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>
-      </BrowserRouter>
-    </HelmetProvider>
+    </>
   );
 }
 
-export default App;
+export default function App() {
+  return <HelmetProvider><BrowserRouter><AppRoutes /></BrowserRouter></HelmetProvider>;
+}

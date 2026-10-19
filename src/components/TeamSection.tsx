@@ -52,7 +52,7 @@ const TeamSection: React.FC<TeamSectionProps> = ({
               <div className="flex flex-col h-full bg-white rounded-[24px] overflow-hidden border border-gray-50 transition-all duration-300 group">
                 {member.imageSrc ? (
                   <div className={`w-full ${columns === 2 ? 'h-[350px] lg:h-[450px]' : 'h-[300px] lg:h-[350px]'} overflow-hidden bg-gray-100`}>
-                    <img 
+                    <img loading="lazy" decoding="async"
                       src={member.imageSrc} 
                       alt={member.name} 
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 

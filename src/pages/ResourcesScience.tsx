@@ -150,6 +150,9 @@ const ResourcesScience = () => {
           </div>
         </div>
       </ScrollReveal>
+      <TextSection headline="Further Reading">
+        <p>For guidance on how supplements can interact with cancer treatment, read the <a className="text-[#237344] underline" href="https://www.cancer.gov/about-cancer/treatment/cam/patient/dietary-interactions-pdq">National Cancer Institute guide to foods, dietary supplements, and cancer therapy</a>.</p>
+      </TextSection>
     </>
   );
 };

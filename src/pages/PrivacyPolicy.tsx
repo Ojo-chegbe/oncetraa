@@ -11,6 +11,7 @@ const PrivacyPolicy = () => {
       />
       <TextSection 
         headline="Privacy Policy"
+        headingLevel="h1"
         bgWhite={true}
       >
         <p>
