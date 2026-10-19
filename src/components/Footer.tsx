@@ -3,6 +3,14 @@ import { Link } from 'react-router-dom';
 import toast from 'react-hot-toast';
 import SuccessModal from './SuccessModal';
 
+const socialLinks = [
+  { name: 'Facebook', href: 'https://www.facebook.com/profile.php?id=61595532660892' },
+  { name: 'TikTok', href: 'https://www.tiktok.com/@oncetra' },
+  { name: 'X', href: 'https://x.com/Oncetra_org' },
+  { name: 'YouTube', href: 'https://www.youtube.com/channel/UCY47aWAo7ify9gmq5o_iH3A' },
+  { name: 'LinkedIn', href: 'https://www.linkedin.com/company/oncetra/' },
+];
+
 const Footer = () => {
   const [isSending, setIsSending] = useState(false);
   const [showSuccess, setShowSuccess] = useState(false);
@@ -150,33 +158,21 @@ const Footer = () => {
           <div className="lg:col-span-1 flex flex-col justify-center px-8 md:px-14 py-10 md:py-16 rounded-[32px] bg-[#0C201A]">
             <div className="flex flex-col w-full h-full justify-between gap-6">
               
-              <a href="https://facebook.com" target="_blank" rel="noreferrer" className="flex items-center justify-between pb-6 border-b border-white/5 group cursor-pointer">
-                <span className="text-white text-xl md:text-[26px] font-bold group-hover:text-[#39A46B] transition-colors tracking-tight">Facebook</span>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white group-hover:text-[#39A46B] transition-colors">
-                  <path d="M5 12h14M12 5l7 7-7 7"/>
-                </svg>
-              </a>
-
-              <a href="https://instagram.com" target="_blank" rel="noreferrer" className="flex items-center justify-between pb-6 border-b border-white/5 group cursor-pointer">
-                <span className="text-white text-xl md:text-[26px] font-bold group-hover:text-[#39A46B] transition-colors tracking-tight">Instagram</span>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white group-hover:text-[#39A46B] transition-colors">
-                  <path d="M5 12h14M12 5l7 7-7 7"/>
-                </svg>
-              </a>
-
-              <a href="https://twitter.com" target="_blank" rel="noreferrer" className="flex items-center justify-between pb-6 border-b border-white/5 group cursor-pointer">
-                <span className="text-white text-xl md:text-[26px] font-bold group-hover:text-[#39A46B] transition-colors tracking-tight">X</span>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white group-hover:text-[#39A46B] transition-colors">
-                  <path d="M5 12h14M12 5l7 7-7 7"/>
-                </svg>
-              </a>
-
-              <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="flex items-center justify-between group cursor-pointer pt-2">
-                <span className="text-white text-xl md:text-[26px] font-bold group-hover:text-[#39A46B] transition-colors tracking-tight">Linkedin</span>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white group-hover:text-[#39A46B] transition-colors">
-                  <path d="M5 12h14M12 5l7 7-7 7"/>
-                </svg>
-              </a>
+              {socialLinks.map(({ name, href }) => (
+                <a
+                  key={name}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`Oncetra on ${name} (opens in a new tab)`}
+                  className="flex items-center justify-between gap-4 pb-6 border-b border-white/5 last:border-b-0 last:pb-0 group cursor-pointer rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#39A46B]"
+                >
+                  <span className="text-white text-xl md:text-[26px] font-bold group-hover:text-[#39A46B] transition-colors tracking-tight">{name}</span>
+                  <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="shrink-0 text-white group-hover:text-[#39A46B] transition-colors">
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                  </svg>
+                </a>
+              ))}
 
             </div>
           </div>
