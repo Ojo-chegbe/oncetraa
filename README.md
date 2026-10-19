@@ -6,7 +6,7 @@ React + Vite website. Run `npm install`, then `npm run dev` for development.
 
 Run `npm run build` and deploy **dist**. The build renders every public route to HTML, creates a 1200 x 630 social card, generates sitemap.xml and robots.txt, and runs SEO regression checks. Page content and metadata are present without JavaScript; React hydrates them for navigation and forms.
 
-- `src/seo.ts`: canonical origin and indexable route inventory. The production domain is `https://oncetra.org`.
+- `src/seo.ts`: canonical origin and indexable route inventory. The production domain is `https://www.oncetra.org`.
 - `src/components/SEO.tsx`: canonical, indexing, Open Graph, Twitter, and Organization/WebSite/WebPage/BreadcrumbList/Article structured data. Page titles and descriptions live with their page components.
 - `scripts/prerender.mjs`: static rendering and generated crawl assets. Generated robots.txt and sitemap.xml override the public copies in production. Dates are deliberately omitted rather than invented.
 - `npm run check:seo`: checks built HTML for unique metadata, correct canonicals, one h1, structured data, image alt attributes, local assets, internal routes and anchor targets, and noindex on 404.

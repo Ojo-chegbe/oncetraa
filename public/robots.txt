@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://oncetra.org/sitemap.xml
+Sitemap: https://www.oncetra.org/sitemap.xml

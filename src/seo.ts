@@ -1,4 +1,4 @@
-export const SITE_URL = 'https://oncetra.org';
+export const SITE_URL = 'https://www.oncetra.org';
 export const SITE_NAME = 'Oncetra';
 export const SOCIAL_IMAGE = '/social-preview.jpg';
 // Only real, indexable routes belong here. Build verification checks internal links against this list.
