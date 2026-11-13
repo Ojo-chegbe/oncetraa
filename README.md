@@ -2,6 +2,14 @@
 
 React + Vite website. Run `npm install`, then `npm run dev` for development.
 
+## Form configuration
+
+Volunteer applications, contact enquiries, partnership enquiries, and newsletter subscriptions use Web3Forms. `.env.production` includes the existing public form access key so production builds work from a clean Git checkout without the ignored local `.env` file. Web3Forms access keys are public email-routing identifiers, not secret API credentials; see the [Web3Forms FAQ](https://docs.web3forms.com/getting-started/faq).
+
+To change the destination, set `VITE_WEB3FORMS_ACCESS_KEY` in the hosting environment before building, then redeploy. Vite embeds the key at build time, so changing a hosting variable alone does not update an existing deployment. Local development can use `.env` or `.env.local`.
+
+Run `node --test tests/form-config.test.mjs` to verify production form configuration without local environment files.
+
 ## Production and SEO
 
 Run `npm run build` and deploy **dist**. The build renders every public route to HTML, creates a 1200 x 630 social card, generates sitemap.xml and robots.txt, and runs SEO regression checks. Page content and metadata are present without JavaScript; React hydrates them for navigation and forms.
