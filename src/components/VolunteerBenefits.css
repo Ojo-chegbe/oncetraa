@@ -1,0 +1,23 @@
+﻿.volunteer-opportunities {
+  padding: 56px 24px;
+  border-top: 1px solid #eee;
+  background: #fff;
+  color: #222;
+}
+
+.vo-container { max-width: 760px; margin: 0 auto; }
+.vo-heading { margin-bottom: 28px; }
+.vo-heading h2, .vo-expectations h2 { font-size: 28px; font-weight: 600; line-height: 1.3; }
+.vo-subtitle, .vo-expectations header > p { margin-top: 12px; color: #666; font-size: 15px; line-height: 1.7; }
+.vo-benefits { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 32px; margin: 0; padding: 0; list-style: none; }
+.vo-benefit h3 { margin-bottom: 6px; font-size: 16px; font-weight: 600; line-height: 1.5; }
+.vo-benefit p { color: #666; font-size: 15px; line-height: 1.7; }
+.vo-expectations { margin-top: 36px; padding-top: 32px; border-top: 1px solid #eee; }
+.vo-expectations ul { margin: 20px 0 0; padding-left: 22px; list-style: disc; color: #666; font-size: 15px; line-height: 1.7; }
+.vo-expectations li + li { margin-top: 8px; }
+
+@media (max-width: 600px) {
+  .volunteer-opportunities { padding: 40px 20px; }
+  .vo-heading h2, .vo-expectations h2 { font-size: 25px; }
+  .vo-benefits { grid-template-columns: minmax(0, 1fr); gap: 20px; }
+}

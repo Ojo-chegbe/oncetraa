@@ -5,6 +5,7 @@ import SuccessModal from './SuccessModal';
 
 const socialLinks = [
   { name: 'Facebook', href: 'https://www.facebook.com/profile.php?id=61595532660892' },
+  { name: 'Instagram', href: 'https://www.instagram.com/on_cetra/' },
   { name: 'TikTok', href: 'https://www.tiktok.com/@oncetra' },
   { name: 'X', href: 'https://x.com/Oncetra_org' },
   { name: 'YouTube', href: 'https://www.youtube.com/channel/UCY47aWAo7ify9gmq5o_iH3A' },

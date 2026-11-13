@@ -4,6 +4,7 @@ import HeroSection from '../components/HeroSection';
 import SplitSection from '../components/SplitSection';
 import ScrollReveal from '../components/ScrollReveal';
 import VolunteerApplication from '../components/VolunteerApplication';
+import VolunteerBenefits from '../components/VolunteerBenefits';
 
 const GetInvolvedVolunteer = () => {
   return (
@@ -40,6 +41,7 @@ const GetInvolvedVolunteer = () => {
         </SplitSection>
       </ScrollReveal>
 
+      <VolunteerBenefits />
       <VolunteerApplication />
     </>
   );
