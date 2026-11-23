@@ -16,6 +16,7 @@ import GetInvolvedCommunity from './pages/GetInvolvedCommunity';
 import Contact from './pages/Contact';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import NotFound from './pages/NotFound';
+import LinksPage from './pages/LinksPage';
 
 // Scroll to top on route change
 function ScrollToTop() {
@@ -36,6 +37,7 @@ export function AppRoutes() {
         <Toaster position="top-center" />
         <ScrollToTop />
         <Routes>
+          <Route path="/links" element={<LinksPage />} />
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
             

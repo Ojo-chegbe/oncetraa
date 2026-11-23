@@ -15,6 +15,7 @@ export const pages = [
   { path: '/get-involved/community', label: 'Community Programs' },
   { path: '/contact', label: 'Contact' },
   { path: '/privacy-policy', label: 'Privacy Policy' },
+  { path: '/links', label: 'Connect With Oncetra' },
 ];
 export function canonicalPath(path: string) {
   return path.split(/[?#]/)[0].replace(/\/+$/, '') || '/';

@@ -12,7 +12,7 @@ for (const path of [...pages.map(page => page.path), '/404']) {
   let markup = render(path);
   const head = [];
   // React 19 hoists metadata. Place it in the document head for non-JS crawlers.
-  markup = markup.replace(/<title\b[^>]*>[\s\S]*?<\/title>|<meta\b[^>]*\/>|<link\b[^>]*\/>/g, tag => { head.push(tag); return ''; });
+  markup = markup.replace(/<title\b[^>]*>[\s\S]*?<\/title>|<meta\b[^>]*\/>|<link\b[^>]*\/>/g, tag => { if (!/^<title\b[^>]*><\/title>$/.test(tag)) head.push(tag); return ''; });
   const html = template.replace('</head>', `${head.join('\n')}\n</head>`).replace('<div id="root"></div>', `<div id="root">${markup}</div>`);
   const output = path === '/' ? 'dist/index.html' : `dist${path}.html`;
   await mkdir(dirname(output), { recursive: true });
