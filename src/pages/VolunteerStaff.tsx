@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import type { FormEvent } from 'react';
 import { Helmet } from 'react-helmet-async';
+import Button from '../components/Button';
 import { AREAS, HOURS } from '../components/volunteer-application';
 import './VolunteerStaff.css';
 
@@ -161,8 +162,8 @@ function StaffQueue({ client, email, onSignOut }: { client: StaffClient; email: 
   return (
     <>
       <header className="staff-heading">
-        <div><span className="staff-org">Oncetra</span><h1>Volunteer applications</h1></div>
-        <div className="staff-account"><span>{email}</span><button className="staff-button" onClick={onSignOut}>Sign out</button></div>
+        <h1>Volunteer applications</h1>
+        <div className="staff-account"><span>{email}</span><button type="button" className="staff-button" onClick={onSignOut}>Sign out</button></div>
       </header>
       <nav className="staff-views" aria-label="Application views">
         {views.map(([value, label]) => (
@@ -178,7 +179,7 @@ function StaffQueue({ client, email, onSignOut }: { client: StaffClient; email: 
             <option value="">All roles</option>{AREAS.map(value => <option key={value}>{value}</option>)}
           </select></label>
           <label>Weekly availability<select value={hours} onChange={event => changeFilter(setHours, event.target.value)}>
-            <option value="">Any availability</option>{HOURS.map(value => <option key={value}>{value}</option>)}
+            <option value="">Any hours</option>{HOURS.map(value => <option key={value}>{value}</option>)}
           </select></label>
           {view === 'all' && <label>Status<select value={status} onChange={event => changeFilter(setStatus, event.target.value)}>
             <option value="">All statuses</option>{stages.map(value => <option key={value}>{value}</option>)}
@@ -191,16 +192,19 @@ function StaffQueue({ client, email, onSignOut }: { client: StaffClient; email: 
           <p className="staff-feedback" role="status">Loading applications…</p>
         ) : queue.applications.length ? (
           <div className="staff-table-wrapper">
-            <table className="staff-table">
-              <thead><tr><th>Applicant</th><th>Preferred role</th><th>Availability</th><th>Status</th><th>Reviewer</th></tr></thead>
-              <tbody>{queue.applications.map(item => (
-                <tr key={item.application_id}>
-                  <td><button className="staff-applicant" disabled={saving}
+            <table className="staff-table" role="table" aria-label="Volunteer applications">
+              <thead role="rowgroup"><tr role="row">
+                <th scope="col" role="columnheader">Applicant</th><th scope="col" role="columnheader">Preferred role</th>
+                <th scope="col" role="columnheader">Availability</th><th scope="col" role="columnheader">Status</th><th scope="col" role="columnheader">Reviewer</th>
+              </tr></thead>
+              <tbody role="rowgroup">{queue.applications.map(item => (
+                <tr role="row" key={item.application_id}>
+                  <td role="cell"><button type="button" className="staff-applicant" disabled={saving}
                     onClick={() => { setSelected(item.application_id); setDetailVersion(value => value + 1); }}>{item.name}</button></td>
-                  <td>{item.preferred_area}</td>
-                  <td>{item.hours}<small>{item.working_arrangement}</small></td>
-                  <td><span className="staff-status" data-status={item.status}>{item.status}</span></td>
-                  <td>{item.reviewer || 'Unassigned'}</td>
+                  <td role="cell"><span className="staff-mobile-label" aria-hidden="true">Preferred role</span>{item.preferred_area}</td>
+                  <td role="cell"><span className="staff-mobile-label" aria-hidden="true">Availability</span>{item.hours}<small>{item.working_arrangement}</small></td>
+                  <td role="cell"><span className="staff-mobile-label" aria-hidden="true">Status</span><span className="staff-status" data-status={item.status}>{item.status}</span></td>
+                  <td role="cell"><span className="staff-mobile-label" aria-hidden="true">Reviewer</span>{item.reviewer || 'Unassigned'}</td>
                 </tr>
               ))}</tbody>
             </table>
@@ -238,8 +242,8 @@ function StaffQueue({ client, email, onSignOut }: { client: StaffClient; email: 
                   </select></label>
                   <label>Last contacted<input type="date" value={application.last_contacted || ''} onChange={event => update('last_contacted', event.target.value)} /></label>
                   <label>Decision notes<textarea rows={4} maxLength={4000} value={application.decision_notes} onChange={event => update('decision_notes', event.target.value)} /></label>
-                  <button className="staff-button staff-primary" type="submit">{saving ? 'Saving…' : 'Save review'}</button>
-                  {saved && <p role="status">Review saved.</p>}
+                  <Button type="submit" disabled={saving}>{saving ? 'Saving…' : 'Save review'}</Button>
+                  {saved && <p role="status" className="staff-saved">Review saved.</p>}
                 </fieldset>
               </form>
             </div>
@@ -307,25 +311,33 @@ export default function VolunteerStaff() {
   }
 
   return (
-    <main className="volunteer-staff">
+    <div className="volunteer-staff">
       <Helmet><title>Volunteer staff | Oncetra</title><meta name="robots" content="noindex, nofollow" /></Helmet>
-      {email && client ? (
-        <><StaffQueue client={client} email={email} onSignOut={signOut} />{error && <p role="alert">{error}</p>}</>
-      ) : (
-        <section className="staff-card staff-sign-in">
-          <span className="staff-org">Oncetra</span><h1>Volunteer staff sign-in</h1>
-          {working && !client ? <p role="status">Checking your sign-in…</p> : !client ? (
-            <p role="status">Staff sign-in is temporarily unavailable.</p>
-          ) : (
-            <form onSubmit={signIn}>
-              <label>Staff email<input name="email" type="email" autoComplete="username" required /></label>
-              <label>Password<input name="password" type="password" autoComplete="current-password" required /></label>
-              <button className="staff-button staff-primary" disabled={working} type="submit">{working ? 'Please wait…' : 'Sign in'}</button>
-            </form>
-          )}
-          {error && <p role="alert">{error}</p>}
-        </section>
-      )}
-    </main>
+      <div className="staff-shell">
+        {email && client ? (
+          <><StaffQueue client={client} email={email} onSignOut={signOut} />{error && <p className="staff-message" role="alert">{error}</p>}</>
+        ) : (
+          <section className="staff-card staff-sign-in" aria-labelledby="staff-sign-in-title">
+            <div className="staff-sign-in-photo">
+              <img src="/images/heroes/volunteer.webp" alt="" />
+            </div>
+            <div className="staff-sign-in-content">
+              <h1 id="staff-sign-in-title">Volunteer staff sign-in</h1>
+              <p>Use your Oncetra staff account.</p>
+              {working && !client ? <p className="staff-message" role="status">Checking your sign-in…</p> : !client ? (
+                <p className="staff-message" role="status">Staff sign-in is temporarily unavailable.</p>
+              ) : (
+                <form onSubmit={signIn}>
+                  <label>Staff email<input name="email" type="email" autoComplete="username" required /></label>
+                  <label>Password<input name="password" type="password" autoComplete="current-password" required /></label>
+                  <Button type="submit" disabled={working}>{working ? 'Please wait…' : 'Sign in'}</Button>
+                </form>
+              )}
+              {error && <p className="staff-message" role="alert">{error}</p>}
+            </div>
+          </section>
+        )}
+      </div>
+    </div>
   );
 }

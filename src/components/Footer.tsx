@@ -12,7 +12,7 @@ const socialLinks = [
   { name: 'LinkedIn', href: 'https://www.linkedin.com/company/oncetra/' },
 ];
 
-const Footer = () => {
+const Footer = ({ newsletterSubject }: { newsletterSubject?: string }) => {
   const [isSending, setIsSending] = useState(false);
   const [showSuccess, setShowSuccess] = useState(false);
 
@@ -48,7 +48,7 @@ const Footer = () => {
     }
   };
   return (
-    <div className="flex justify-center self-stretch bg-[#122922] pt-16 md:pt-[120px] pb-[29px] px-6 md:px-12 lg:px-[120px]">
+    <footer className="flex justify-center self-stretch bg-[#122922] pt-16 md:pt-[120px] pb-[29px] px-6 md:px-12 lg:px-[120px]">
       <div className="flex flex-col w-full max-w-[1400px] gap-8">
         
         {/* Footer Layout */}
@@ -59,7 +59,7 @@ const Footer = () => {
           
           {/* Top Left: Newsletter */}
           <div className="flex flex-col items-start py-10 md:py-16 px-8 md:px-12 gap-8 rounded-[32px] bg-[#0C201A]">
-            <h2 className="text-white text-4xl md:text-5xl font-bold leading-tight">
+            <h2 id="newsletter-heading" className="scroll-mt-32 text-white text-4xl md:text-5xl font-bold leading-tight">
               {"Stay Connected"}<br/>{"With Our Impact"}
             </h2>
             <p className="text-white/80 text-lg md:text-xl max-w-md leading-relaxed">
@@ -67,15 +67,18 @@ const Footer = () => {
             </p>
             
             <form onSubmit={onSubmit} className="w-full max-w-md mt-4 flex flex-col gap-2 relative">
-              <div className="flex items-center p-2 rounded-full border border-white/10 bg-[#122922] w-full">
+              {newsletterSubject && <input type="hidden" name="subject" value={newsletterSubject} />}
+              <div className="flex items-center p-2 rounded-full border border-white/10 bg-[#122922] w-full focus-within:ring-2 focus-within:ring-[#79C998]">
                 <input 
                   type="email" 
                   name="email"
+                  aria-label="Newsletter email address"
+                  autoComplete="email"
                   required
                   placeholder="Your Email Address" 
                   className="bg-transparent border-none outline-none text-white text-base px-6 py-2 w-full placeholder:text-white/40" 
                 />
-                <button type="submit" disabled={isSending} className="flex items-center justify-center shrink-0 w-12 h-12 bg-[#39A46B] text-white rounded-full hover:bg-[#2d8555] transition-colors ml-2 disabled:opacity-50">
+                <button type="submit" aria-label="Subscribe to the newsletter" disabled={isSending} className="flex items-center justify-center shrink-0 w-12 h-12 bg-[#39A46B] text-white rounded-full hover:bg-[#2d8555] transition-colors ml-2 disabled:opacity-50">
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M5 12h14M12 5l7 7-7 7"/>
                   </svg>
@@ -198,7 +201,7 @@ const Footer = () => {
         title="Subscribed!"
         message="Thank you for subscribing to the Oncetra newsletter. You're now on the list to receive our latest updates and impact reports." 
       />
-    </div>
+    </footer>
   );
 };
 

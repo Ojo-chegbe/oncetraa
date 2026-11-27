@@ -12,6 +12,7 @@ interface HeroSectionProps {
   button2Link?: string;
   bgImage?: string;
   showRightContent?: boolean;
+  compact?: boolean;
 }
 
 const HeroSection: React.FC<HeroSectionProps> = ({
@@ -20,15 +21,16 @@ const HeroSection: React.FC<HeroSectionProps> = ({
   button1Text,
   button1Link,
   bgImage = "/hero-bg.webp",
-  showRightContent = true
+  showRightContent = true,
+  compact = false,
 }) => {
   return (
-    <div className="flex flex-col relative min-h-screen xl:min-h-[900px] overflow-hidden -mt-[100px]">
+    <div className={`flex flex-col relative overflow-hidden -mt-[100px] ${compact ? 'min-h-[360px] md:min-h-[420px]' : 'min-h-screen xl:min-h-[900px]'}`}>
       {/* Background Image & Overlay */}
       <div className="absolute inset-0 z-0">
         <img
           src={bgImage} 
-          className="w-full h-full object-cover"
+          className={`w-full h-full object-cover ${compact ? 'object-[50%_29%]' : ''}`}
           alt=""
           fetchPriority="high"
           loading="eager"
@@ -37,13 +39,13 @@ const HeroSection: React.FC<HeroSectionProps> = ({
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
       </div>
 
-      <div className="relative z-10 flex justify-center self-stretch py-[100px] lg:py-[119px] px-6 md:px-12 lg:px-[120px] h-full flex-1 mt-[100px] lg:mt-[120px]">
-        <div className="flex flex-col lg:flex-row items-center justify-between w-full max-w-[1400px] gap-10 h-full">
+      <div className={`relative z-10 flex justify-center self-stretch px-6 md:px-12 lg:px-[120px] flex-1 mt-[100px] lg:mt-[120px] ${compact ? 'items-center py-10 md:py-14' : 'h-full py-[100px] lg:py-[119px]'}`}>
+        <div className={`flex flex-col lg:flex-row justify-between w-full max-w-[1400px] gap-10 h-full ${compact ? 'items-start' : 'items-center'}`}>
         {/* Left Content */}
         <div className="flex flex-col shrink-0 items-start pb-[1px] gap-8 max-w-[600px]">
             <div className="flex flex-col items-start gap-4">
                 <div className="flex flex-col items-start">
-                    <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-bold leading-tight" style={{ whiteSpace: 'pre-line' }}>
+                    <h1 className={`text-white text-4xl md:text-5xl font-bold leading-tight ${compact ? '' : 'lg:text-6xl'}`} style={{ whiteSpace: 'pre-line' }}>
                         {headline}
                     </h1>
                 </div>

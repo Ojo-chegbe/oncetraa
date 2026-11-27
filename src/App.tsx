@@ -38,10 +38,10 @@ export function AppRoutes() {
         <Toaster position="top-center" />
         <ScrollToTop />
         <Routes>
-          <Route path="/links" element={<LinksPage />} />
-          <Route path="/staff/volunteers" element={<VolunteerStaff />} />
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
+            <Route path="links" element={<LinksPage />} />
+            <Route path="staff/volunteers" element={<VolunteerStaff />} />
             
             <Route path="about" element={<About />} />
             
