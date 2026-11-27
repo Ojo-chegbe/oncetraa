@@ -10,6 +10,11 @@
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
+    "@neon/auth": "^0.8.2",
+    "@vercel/functions": "^3.11.4",
+    "botid": "^1.5.13",
+    "jose": "^6.2.18",
+    "pg": "^8.23.1",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "react-helmet-async": "^3.0.0",

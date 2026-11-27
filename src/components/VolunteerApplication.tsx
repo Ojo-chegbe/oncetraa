@@ -8,6 +8,15 @@ import type { FieldName, FormErrors, VolunteerData } from './volunteer-applicati
 import './VolunteerApplication.css';
 
 const fieldId = (name: FieldName) => `volunteer-${name}`;
+const trackerEnabled = import.meta.env.VITE_VOLUNTEER_TRACKER_ENABLED === 'true';
+const web3FormsEndpoint = 'https://api.web3forms.com/submit';
+
+function volunteerEmailBody(application: Record<string, string>, accessKey: string) {
+  const body = new FormData();
+  for (const [key, value] of Object.entries(application)) body.append(key, value);
+  body.append('access_key', accessKey);
+  return body;
+}
 
 function Field({ name, label, optional = false, hint, error, children, wide = false }: {
   name: FieldName; label: string; optional?: boolean; hint?: string; error?: string;
@@ -105,6 +114,7 @@ export default function VolunteerApplication() {
   const [errors, setErrors] = useState<FormErrors>({});
   const [sending, setSending] = useState(false);
   const sendingRef = useRef(false);
+  const applicationIdRef = useRef<string | null>(null);
   const [submitError, setSubmitError] = useState('');
   const [submitted, setSubmitted] = useState(false);
   const [returnToReview, setReturnToReview] = useState(false);
@@ -161,8 +171,9 @@ export default function VolunteerApplication() {
     }
     // Honeypot: genuine applicants never interact with this field.
     if (new FormData(event.currentTarget).get('botcheck')) return;
-    const accessKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY;
-    if (!accessKey) {
+    const accessKey = import.meta.env.VITE_VOLUNTEER_WEB3FORMS_ACCESS_KEY?.trim()
+      || import.meta.env.VITE_WEB3FORMS_ACCESS_KEY;
+    if (!trackerEnabled && !accessKey) {
       setSubmitError('Applications are temporarily unavailable. Your answers are still here. Please try again later or contact us through our Contact page.');
       return;
     }
@@ -170,12 +181,30 @@ export default function VolunteerApplication() {
     const controller = new AbortController();
     const timeout = setTimeout(() => controller.abort(), 30000);
     try {
-      const body = new FormData();
-      Object.entries(applicationPayload(data)).forEach(([key, value]) => body.append(key, value));
-      body.append('access_key', accessKey);
-      const response = await fetch('https://api.web3forms.com/submit', { method: 'POST', body, signal: controller.signal });
+      applicationIdRef.current ??= crypto.randomUUID();
+      const application = { ...applicationPayload(data), application_id: applicationIdRef.current };
+      const request: RequestInit = { method: 'POST', signal: controller.signal };
+      let url = web3FormsEndpoint;
+      if (trackerEnabled) {
+        url = '/api/volunteer';
+        request.headers = { 'Content-Type': 'application/json' };
+        request.body = JSON.stringify(application);
+      } else {
+        request.body = volunteerEmailBody(application, accessKey);
+      }
+      const response = await fetch(url, request);
       const result = await response.json();
-      if (!response.ok || result.success !== true) throw new Error('Submission failed');
+      if (!response.ok || result.success !== true
+        || (trackerEnabled && result.application_id !== applicationIdRef.current)) {
+        throw new Error('Submission failed');
+      }
+      if (trackerEnabled && accessKey) {
+        void fetch(web3FormsEndpoint, {
+          method: 'POST', body: volunteerEmailBody(application, accessKey), keepalive: true,
+        }).then(async backup => {
+          if (!backup.ok || (await backup.json()).success !== true) throw new Error('Backup request failed');
+        }).catch(() => console.warn('Volunteer backup email request failed.'));
+      }
       setSubmitted(true); setData({ ...EMPTY_APPLICATION }); setErrors({});
       requestAnimationFrame(() => {
         headingRef.current?.focus({ preventScroll: true });

@@ -1,0 +1,70 @@
+.volunteer-staff {
+  min-height: 100vh;
+  padding: clamp(1rem, 4vw, 3.5rem) max(1rem, calc((100vw - 76rem) / 2));
+  background: #f4f7f4;
+  color: #122922;
+  font: 1rem/1.5 Onest, system-ui, sans-serif;
+}
+
+.volunteer-staff h1, .volunteer-staff h2, .volunteer-staff h3 { margin: 0; font-weight: 750; }
+.volunteer-staff h1 { font-size: clamp(1.65rem, 4vw, 2.75rem); line-height: 1.15; }
+.volunteer-staff h2 { font-size: 1.4rem; }
+.staff-org { display: block; margin-bottom: .4rem; color: #27604b; font-weight: 750; }
+.staff-heading, .staff-detail-heading, .staff-account, .staff-pages {
+  display: flex; align-items: center; justify-content: space-between; gap: .75rem; flex-wrap: wrap;
+}
+.staff-account { font-size: .9rem; color: #485a51; overflow-wrap: anywhere; }
+.staff-views { display: flex; flex-wrap: wrap; gap: .4rem; margin: 1.5rem 0 .9rem; }
+.staff-views button, .staff-button {
+  padding: .52rem .8rem; border: 1px solid #ccd9d0; border-radius: .45rem;
+  background: #fff; color: #1d4938; font-weight: 650;
+}
+.staff-button:not(:disabled):hover, .staff-views button:hover { border-color: #27604b; background: #edf5ef; }
+.staff-views button[aria-pressed="true"], .staff-primary { background: #21513f; color: #fff; border-color: #21513f; }
+.staff-primary:not(:disabled):hover, .staff-views button[aria-pressed="true"]:hover { background: #193e31; }
+.staff-button:disabled { opacity: .55; cursor: default; }
+.volunteer-staff :focus-visible { outline: 3px solid #31835f; outline-offset: 2px; }
+.staff-card { background: #fff; border: 1px solid #d9e3dc; border-radius: .75rem; }
+.staff-sign-in { max-width: 28rem; margin: 9vh auto; padding: clamp(1.15rem, 4vw, 2.25rem); }
+.staff-sign-in form, .staff-review fieldset { display: grid; gap: .85rem; margin-top: 1rem; }
+.staff-filters { display: flex; flex-wrap: wrap; gap: .8rem; padding: 1rem; border-bottom: 1px solid #d9e3dc; }
+.staff-filters label { flex: 1 1 12rem; min-width: 0; }
+.volunteer-staff label { display: grid; gap: .28rem; font-size: .9rem; font-weight: 650; }
+.volunteer-staff input, .volunteer-staff select, .volunteer-staff textarea {
+  min-width: 0; width: 100%; border: 1px solid #b8cbbf; border-radius: .4rem;
+  background: #fff; color: #122922; padding: .48rem .62rem; font-size: 1rem; font-weight: 400;
+}
+.volunteer-staff textarea { resize: vertical; }
+.staff-table-wrapper { overflow-x: auto; }
+.staff-table { width: 100%; min-width: 43rem; border-collapse: collapse; text-align: left; }
+.staff-table th, .staff-table td { padding: .7rem .95rem; border-bottom: 1px solid #e4ebe5; vertical-align: top; }
+.staff-table th { background: #f7faf7; color: #3d5247; font-size: .88rem; }
+.staff-table tr:last-child td { border-bottom: 0; }
+.staff-table small { display: block; color: #526459; }
+.staff-applicant { text-align: left; font-weight: 750; color: #20543f; text-decoration: underline; text-underline-offset: .16em; }
+.staff-applicant:disabled { opacity: .55; }
+.staff-status {
+  display: inline-block; border-radius: 1rem; padding: .18rem .58rem;
+  background: #e9efeb; color: #28473b; font-size: .86rem; white-space: nowrap;
+}
+.staff-status[data-status="Invited"] { background: #fff0cf; color: #67470f; }
+.staff-status[data-status="Confirmed"], .staff-status[data-status="Shortlisted"] { background: #dceee2; color: #1e543d; }
+.staff-feedback, .staff-pages { margin: 0; padding: .95rem 1rem; }
+.staff-pages { border-top: 1px solid #e4ebe5; }
+.staff-detail { margin-top: 1.15rem; padding: 1rem; scroll-margin-top: 1rem; }
+.staff-detail-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(15rem, .7fr); gap: 1.2rem; margin-top: 1rem; }
+.staff-answers { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .65rem; margin: 0; }
+.staff-answers div { padding: .6rem .75rem; border-radius: .42rem; background: #f4f7f4; }
+.staff-answers dt { font-size: .88rem; font-weight: 650; }
+.staff-answers dd { margin: .15rem 0 0; color: #3d5146; white-space: pre-wrap; overflow-wrap: anywhere; }
+.staff-review { border-left: 1px solid #e4ebe5; padding-left: 1rem; }
+.staff-review fieldset { padding: 0; border: 0; min-width: 0; }
+.staff-detail-error { margin-top: .8rem; }
+.staff-detail-error p { margin: 0 0 .55rem; }
+.volunteer-staff [role="alert"] { color: #8a2828; }
+
+@media (max-width: 47rem) {
+  .staff-detail-grid { grid-template-columns: minmax(0, 1fr); }
+  .staff-review { padding: 1rem 0 0; border-left: 0; border-top: 1px solid #e4ebe5; }
+}
+@media (max-width: 29rem) { .staff-answers { grid-template-columns: minmax(0, 1fr); } }

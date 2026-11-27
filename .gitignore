@@ -4,3 +4,6 @@ dist
 .DS_Store
 
 .prerender
+
+.vercel
+.env.local

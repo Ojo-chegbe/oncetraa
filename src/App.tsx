@@ -17,6 +17,7 @@ import Contact from './pages/Contact';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import NotFound from './pages/NotFound';
 import LinksPage from './pages/LinksPage';
+import VolunteerStaff from './pages/VolunteerStaff';
 
 // Scroll to top on route change
 function ScrollToTop() {
@@ -38,6 +39,7 @@ export function AppRoutes() {
         <ScrollToTop />
         <Routes>
           <Route path="/links" element={<LinksPage />} />
+          <Route path="/staff/volunteers" element={<VolunteerStaff />} />
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
             
